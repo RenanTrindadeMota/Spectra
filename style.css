@@ -21,7 +21,7 @@ header {
     z-index: 50;
     overflow: hidden;
     position: fixed;
-    background-color: red;
+    /* background-color: red; */
 }
 
 header li{
@@ -31,29 +31,53 @@ header li{
 header li button {
     font-size: 130%;
     text-decoration: none;
-    color: #7D5E39;
+    color: #000;
     font-family: 'antic didone';
     background-color: transparent;
     border: none;
-    padding: 10px 20px;
+    padding: 0px 20px;
     cursor: pointer;
     display: flex;
 }
 
-#navbar {
+.navbar {
     width: 100%;
-    max-width: 1350px;
-    margin: 0 auto; /* Centraliza o navbar horizontalmente */
+    height: 55px;
+    max-width: 1750px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
-    justify-content: space-evenly; /* Distribui os itens igualmente */
+    justify-content: space-between;
     align-items: center;
-    position: relative; /* Mantém o navbar centralizado dentro do cabeçalho */
+    /* position: relative; */
+
+}
+
+.left-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #logo {
-    width: 200px;
-    height: 50px;
+    width: 180px;
+    height: 40px;
     background-image: url(img/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#carrinho {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/carrinho.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -66,12 +90,14 @@ header li button {
 }
 
 .container a {
+    width: 270px;
+    height: 320px;
     text-decoration: none;
 }
 
 .card {
     width: 270px;
-    height: 300px;
+    height: 320px;
     padding: 15px;
     border-radius: 6px;
     background-color: #fff;
@@ -81,7 +107,6 @@ header li button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 .card:hover {
@@ -93,7 +118,7 @@ header li button {
     width: 120px;
     height: 160px;
     position: relative;
-    top: 45px;
+    /* top: 45px; */
 }
 
 .card p {
@@ -105,17 +130,35 @@ header li button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
 .favoritos {
     width: 40px;
     height: 40px;
+    z-index: 10;
     border: none;
     background: transparent;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
-    position: absolute;
-    left: 210px;
+    position: relative;
+    left: 100px;
+}
+
+.remover-btn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: none;
+    opacity: 75%;
+    background: transparent;
+    background-image: url(img/x-icon.jpeg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+    left: 100px;
 }

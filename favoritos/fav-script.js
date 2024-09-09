@@ -11,13 +11,23 @@ function atualizarProdutos() {
 
     produtoContainer.innerHTML = ''; // Limpar o container para evitar duplicações
 
+
+    
     favoritos.forEach((favorito, index) => {
         const card = document.createElement('div');
         card.classList.add('card');
 
+        const removerButton = document.createElement('button');
+        removerButton.classList.add('remover-btn')
+        // removerButton.textContent = 'Remover';
+        removerButton.onclick = () => removerFavorito(index);
+
         const img = document.createElement('img');
         img.src = favorito.imgSrc;
         img.alt = favorito.nome;
+
+        const titulo_card = document.createElement('div');
+        titulo_card.classList.add('titulo-card');
 
         const nome = document.createElement('p');
         nome.classList.add('nome');
@@ -27,14 +37,12 @@ function atualizarProdutos() {
         preco.classList.add('preco');
         preco.textContent = favorito.preco;
 
-        const removerButton = document.createElement('button');
-        removerButton.textContent = 'Remover';
-        removerButton.onclick = () => removerFavorito(index);
-
-        card.appendChild(img);
-        card.appendChild(nome);
-        card.appendChild(preco);
         card.appendChild(removerButton);
+        card.appendChild(img);
+        titulo_card.appendChild(nome);
+        titulo_card.appendChild(preco);
+        card.appendChild(titulo_card)
+
 
         produtoContainer.appendChild(card);
     });

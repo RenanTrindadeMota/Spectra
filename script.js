@@ -13,12 +13,10 @@ function addAoFavoritos(cardId) {
         // O produto já está nos favoritos, então removemos
         favoritos.splice(produtoIndex, 1);
         localStorage.setItem('favoritos', JSON.stringify(favoritos));
-        alert('Produto removido dos favoritos!');
     } else {
         // O produto não está nos favoritos, então adicionamos
         favoritos.push({ imgSrc, nome, preco });
         localStorage.setItem('favoritos', JSON.stringify(favoritos));
-        alert('Produto adicionado aos favoritos!');
     }
     
     // Atualiza o estado do botão
