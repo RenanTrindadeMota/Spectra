@@ -1,61 +1,50 @@
-
-
-function addAoProdutos(nome, preco) {
-    let produto = JSON.parse(localStorage.getItem('produtos')) || [];
-
-    const produtoExistente = produtos.find(p => p.nome === nome);
-
-    if (produtoExistente) {
-        produtoExistente.quantidade += 1
-    } else {
-        produtos.push ({nome,preço,quantidade:1,imagem:` /100?text=${encodeURLComponent(nome)}`})
-    }
-    localStorage.setItem('produtos', JSON.stringify(produtos));
-    // alert(nome + ' foi adicionado ao produtos!');
-}
-
-// Remove um item do produtos
-function removerDoCarrinho(nome) {
-    let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-    produtos = produtos.filter(p => p.nome !== nome);
-    localStorage.setItem('produtos', JSON.stringify(produtos));
-    atualizarprodutos(); // Atualiza a página do produtos
-}
-
-// Atualiza o produtos na página
-function atualizarProdutos() {
-    const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-    const produtosContainer = document.getElementById('produtos');
-    const totalContainer = document.getElementById('total');
+function addAoFavoritos(cardId) {
+    const card = document.getElementById(cardId);
+    const imgSrc = card.querySelector('img').src;
+    const nome = card.querySelector('.nome').textContent;
+    const preco = card.querySelector('.preco').textContent;
     
-    produtosContainer.innerHTML = '';
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
-    if (produtos.length === 0) {
-        produtosContainer.innerHTML = '<p>Seu produtos está vazio.</p>';
-        totalContainer.innerText = 'Total: R$0,00';
-        return;
+    // Verifica se o produto já está nos favoritos
+    const produtoIndex = favoritos.findIndex(favorito => favorito.nome === nome);
+
+    if (produtoIndex > -1) {
+        // O produto já está nos favoritos, então removemos
+        favoritos.splice(produtoIndex, 1);
+        localStorage.setItem('favoritos', JSON.stringify(favoritos));
+        alert('Produto removido dos favoritos!');
+    } else {
+        // O produto não está nos favoritos, então adicionamos
+        favoritos.push({ imgSrc, nome, preco });
+        localStorage.setItem('favoritos', JSON.stringify(favoritos));
+        alert('Produto adicionado aos favoritos!');
     }
-
-    let total = 0;
-
-    produtos.forEach(item => {
-        const itemElement = document.createElement('div');
-        itemElement.className = 'card-total';
-        itemElement.innerHTML = `
-            <img src="${item.imagem}" alt="${item.nome}">
-            <div class="card">
-                <h2>${item.nome}</h2>
-                <p>R$${item.preco.toFixed(2)}</p>
-                <p>Quantidade: ${item.quantidade}</p>
-                <p>Subtotal: R$${(item.preco * item.quantidade).toFixed(2)}</p>
-            </div>
-            <button onclick="removerDoprodutos('${item.nome}')">Remover</button>
-        `;
-        produtosContainer.appendChild(itemElement);
-        total += item.preco * item.quantidade;
-    });
-
-    totalContainer.innerText = `Total: R$${total.toFixed(2)}`;
+    
+    // Atualiza o estado do botão
+    atualizarBotaoFavoritos(cardId);
 }
 
-document.addEventListener('DOMContentLoaded', atualizarprodutos);
+function atualizarBotaoFavoritos(cardId) {
+    const card = document.getElementById(cardId);
+    const botaoFavoritos = card.querySelector('.favoritos');
+    
+    // Verifica se o produto está nos favoritos para definir o estado do botão
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    const nome = card.querySelector('.nome').textContent;
+    const produtoIndex = favoritos.findIndex(favorito => favorito.nome === nome);
+    
+    if (produtoIndex > -1) {
+        // O produto está nos favoritos, então mostramos a imagem de coração preto
+        botaoFavoritos.style.backgroundImage = "url('img/coração-preto.png')";
+    } else {
+        // O produto não está nos favoritos, então mostramos a imagem de coração branco
+        botaoFavoritos.style.backgroundImage = "url('img/coração-branco.png')";
+    }
+}
+
+// Atualiza o estado do botão quando a página é carregada
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => atualizarBotaoFavoritos(card.id));
+});

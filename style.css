@@ -4,8 +4,50 @@
     box-sizing: border-box;
 }
 
-#navbar {
+@font-face {
+    font-family: 'open-sans';
+    src:url(fonts/OpenSans-Regular.ttf)
 
+}
+
+body {
+    background-color: rgb(234, 230, 225);
+}
+
+header {
+    width: 100%;
+    height: 55px;
+    top: 0;
+    z-index: 50;
+    overflow: hidden;
+    position: fixed;
+    background-color: red;
+}
+
+header li{
+    display: inline-block;
+}
+
+header li button {
+    font-size: 130%;
+    text-decoration: none;
+    color: #7D5E39;
+    font-family: 'antic didone';
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+}
+
+#navbar {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto; /* Centraliza o navbar horizontalmente */
+    display: flex;
+    justify-content: space-evenly; /* Distribui os itens igualmente */
+    align-items: center;
+    position: relative; /* Mantém o navbar centralizado dentro do cabeçalho */
 }
 
 #logo {
@@ -17,20 +59,63 @@
     background-repeat: no-repeat;
 }
 
+.container {
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container a {
+    text-decoration: none;
+}
+
 .card {
-    width: 300px;
+    width: 270px;
     height: 300px;
-    background-color: blue;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta a escala do card em 5% */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 120px;
+    height: 160px;
+    position: relative;
+    top: 45px;
+}
+
+.card p {
+    font-family: 'open-sans';
+    color: #000;
+}
+
+.titulo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .favoritos {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: none;
     background: transparent;
-    background-image: url(img/coração-branco.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    position: absolute;
+    left: 210px;
 }
