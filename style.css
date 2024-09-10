@@ -162,3 +162,21 @@ header li button {
     position: relative;
     left: 100px;
 }
+
+.positivo {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/positivo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.negativo {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/negativo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

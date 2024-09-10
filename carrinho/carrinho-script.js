@@ -66,3 +66,5 @@ function atualizarProdutos() {
 //     localStorage.setItem('favoritos', JSON.stringify(favoritos));
 //     atualizarProdutos(); // Atualiza a lista de produtos na página
 // }
+
+    function 
