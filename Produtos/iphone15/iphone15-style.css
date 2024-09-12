@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'open-sans';
-    src:url(../fonts/OpenSans-Regular.ttf)
+    src:url(../../fonts/OpenSans-Regular.ttf)
 
 }
 
@@ -65,7 +65,7 @@ header li button {
 #logo {
     width: 180px;
     height: 40px;
-    background-image: url(../img/logo.png);
+    background-image: url(../../img/logo.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -74,7 +74,7 @@ header li button {
 #carrinho {
     width: 30px;
     height: 30px;
-    background-image: url(../img/carrinho.png);
+    background-image: url(../../img/carrinho.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -97,7 +97,7 @@ header li button {
 .cartaz {
     width: 650px;
     height: 650px;
-    background-image: url(../img/iphone_15_pro1.png);
+    background-image: url(../../img/iphone_15_pro1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

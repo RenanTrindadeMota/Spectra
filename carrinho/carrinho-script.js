@@ -1,70 +1,93 @@
-document.addEventListener('DOMContentLoaded', atualizarProdutos);
+document.addEventListener("DOMContentLoaded", function() {
+    // Verificar se há um produto no LocalStorage
+    const produto = JSON.parse(localStorage.getItem('produtoCarrinho'));
 
-function atualizarProdutos() {
-    const produtoContainer = document.getElementById('produto');
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    if (produto) {
+        // Selecionar os elementos onde o produto será exibido
+        const produtoContainer = document.getElementById('produto');  //const que em que os itens do produto serão colocados
+        const totalContainer = document.getElementById('total');
 
-    if (carrinho.length === 0) {
-        produtoContainer.innerHTML = '<p>O carrinho está vazio.</p>';
-        return;
+        // Exibir o produto no carrinho
+        produtoContainer.innerHTML =            // se a const produtoContainer tiver elementos que foram salvos no produto, o innerHTML permite inserir na tela
+        ` 
+            <div class="card-carrinho">
+                <img src="${produto.imagem}" alt="${produto.nome}">
+                <div class="titulo-card">
+                    <p class="nome-carrinho">${produto.nome}</p>
+                    <p class="preco-carrinho">${produto.preco}</p>
+                </div>
+                <div class="mais_menos">
+                    <div class="negativo"></div>
+                    <div class="quantidade"></div>
+                    <div class="positivo"></div>
+                </div>
+            </div>
+        `;
+
+        // Exibir o preço total
+        totalContainer.innerHTML = `<p>Total: ${produto.preco}</p>`;
+    } else {
+        // Se não houver produto no LocalStorage, exibir uma mensagem
+        const produtoContainer = document.getElementById('produto');
+        produtoContainer.innerHTML = `<p>Seu carrinho está vazio</p>`;
     }
+});
 
-    produtoContainer.innerHTML = ''; // Limpar o container para evitar duplicações
 
-
-    
-    carrinho.forEach((pCarrinho, index) => {           //pCarrinho é abreviação de produto_carrinho
-        const card = document.createElement('div');
-        card.classList.add('card');
-
-        const carrinhoButton = document.createElement('div');
-        carrinhoButton.classList.add('carrinho-btn');
-
-        const positivo = document.createElement('button');
-        positivo.classList.add('positivo');
-
-        const quantidade = document.createElement('p');
-        quantidade.classList.add('quantidade');
-        quantidade.textContent = "1";
-
-        const negativo = document.createElement('button');
-        negativo.classList.add('negativo');
-
-        const img = document.createElement('img');
-        img.src = pCarrinho.imgSrc;
-        img.alt = pCarrinho.nome;
-
-        const titulo_card = document.createElement('div');
-        titulo_card.classList.add('titulo-card');
-
-        const nome = document.createElement('p');
-        nome.classList.add('nome');
-        nome.textContent = pCarrinho.nome;
-
-        const preco = document.createElement('p');
-        preco.classList.add('preco');
-        preco.textContent = pCarrinho.preco;
-
-        card.appendChild(carrinhoButton);
-        carrinhoButton.appendChild(positivo);
-        carrinhoButton.appendChild(quantidade);
-        carrinhoButton.appendChild(negativo);
-        card.appendChild(img);
-        card.appendChild(titulo_card)
-        titulo_card.appendChild(nome);
-        titulo_card.appendChild(preco);
-
-        produtoContainer.appendChild(card);
-    });
-
-    document.getElementById('total').textContent = `Total: `;
-}
-
-// function removerFavorito(index) {
-//     const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-//     favoritos.splice(index, 1); // Remove o item do array
-//     localStorage.setItem('favoritos', JSON.stringify(favoritos));
-//     atualizarProdutos(); // Atualiza a lista de produtos na página
+// if (document.readyState === "loading") {
+//     document.addEventListener("DOMContentLoaded", Iniciar);
+// } else {
+//     Iniciar();
 // }
 
-    function 
+// function Iniciar() {
+//     const produtosChange = document.getElementsByClassName("carrinho-btn");
+    
+//     for (let i = 0; i < produtosChange.length; i++) {
+//         const produtoQuantidade = produtosChange[i].getElementsByClassName("quantidade")[0];
+//         const adicionarProduto = produtosChange[i].getElementsByClassName("positivo")[0];
+//         const removeProduto = produtosChange[i].getElementsByClassName("negativo")[0];
+        
+//         adicionarProduto.addEventListener("click", () => alterarQuantidade(produtoQuantidade, 1));
+//         removeProduto.addEventListener("click", () => alterarQuantidade(produtoQuantidade, -1));
+//     }
+
+//     atualizarValor();
+// }
+
+// function alterarQuantidade(quantidadeElemento, delta) {
+//     let quantidade = parseInt(quantidadeElemento.value, 10);
+//     quantidade = Math.max(0, quantidade + delta); // Impede quantidade negativa
+//     quantidadeElemento.value = quantidade;
+
+//     if (quantidade === 0) {
+//         removerProduto(quantidadeElemento);
+//     }
+
+//     atualizarValor();
+// }
+
+// function removerProduto(quantidadeElemento) {
+//     const produtoElemento = quantidadeElemento.closest('.produto');
+//     if (produtoElemento) {
+//         produtoElemento.parentElement.parentElement.remove(); // Remove o produto do carrinho
+//     }
+// }
+
+// function atualizarValor() {
+//     let valorTotal = 0;
+//     const produtosInfo = document.getElementsByClassName("carrinho-btn");
+
+//     for (let i = 0; i < produtosInfo.length; i++) {
+//         const produtoPreco = parseFloat(produtosInfo[i].getElementsByClassName("preco")[0].innerText.replace("R$", "").replace(",", "."));
+//         const produtoQuantidade = parseInt(produtosInfo[i].getElementsByClassName("quantidade")[0].value, 10);
+
+//         valorTotal += (produtoPreco * produtoQuantidade);
+//     }
+
+//     uptdate(valorTotal);
+// }
+
+// function uptdate(valorTotal) {
+//     document.querySelector("#total span").innerText = `R$${valorTotal.toFixed(2).replace(".", ",")}`;
+// }

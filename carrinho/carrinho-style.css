@@ -1,12 +1,12 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 @font-face {
     font-family: 'open-sans';
-    src:url(fonts/OpenSans-Regular.ttf)
+    src:url(../fonts/OpenSans-Regular.ttf)
 
 }
 
@@ -68,7 +68,7 @@ header li button {
 #logo {
     width: 180px;
     height: 40px;
-    background-image: url(img/logo.png);
+    background-image: url(../img/logo.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,7 +77,7 @@ header li button {
 #carrinho {
     width: 30px;
     height: 30px;
-    background-image: url(img/carrinho.png);
+    background-image: url(../img/carrinho.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -93,7 +93,7 @@ header li button {
     text-decoration: none;
 }
 
-.card {
+.card-carrinho {
     width: 270px;
     height: 320px;
     padding: 15px;
@@ -107,74 +107,45 @@ header li button {
     align-items: center;
 }
 
-.card:hover {
-    transform: scale(1.05); /* Aumenta a escala do card em 5% */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.card img {
-    width: 120px;
-    height: 160px;
-    position: relative;
-    /* top: 45px; */
-}
-
-.card p {
-    font-family: 'open-sans';
-    color: #000;
-}
-
 .titulo-card {
+    font-family: 'open-sans';
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
-.favoritos {
-    width: 40px;
-    height: 40px;
-    z-index: 10;
-    border: none;
-    background: transparent;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    position: relative;
-    left: 100px;
-}
-
-.remover-btn {
+.mais_menos {
+    width: 60px;
+    height: 20px;
     display: flex;
-    width: 40px;
-    height: 40px;
-    border: none;
-    opacity: 75%;
-    background: transparent;
-    background-image: url(img/x-icon.jpeg.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    position: relative;
-    left: 100px;
-}
-
-.positivo {
-    width: 30px;
-    height: 30px;
-    background-image: url(img/positivo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    flex-direction: row;
+    position: absolute;
+    bottom: 30px;
+    left: 200px;
 }
 
 .negativo {
-    width: 30px;
-    height: 30px;
-    background-image: url(img/negativo.png);
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/negativo.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.quantidade {
+    width: 20px;
+    height: 20px;
+}
+
+.positivo {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/positivo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
