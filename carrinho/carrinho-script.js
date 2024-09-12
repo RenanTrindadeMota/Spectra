@@ -1,38 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Verificar se há um produto no LocalStorage
     const produto = JSON.parse(localStorage.getItem('produtoCarrinho'));
+    // favoritos.forEach((favorito, index) => {
+        if (produto) {
+            
+            // Selecionar os elementos onde o produto será exibido
+            const produtoContainer = document.getElementById('produto');
+            const totalContainer = document.getElementById('total');
 
-    if (produto) {
-        // Selecionar os elementos onde o produto será exibido
-        const produtoContainer = document.getElementById('produto');
-        const totalContainer = document.getElementById('total');
-
-        // Exibir o produto no carrinho
-        produtoContainer.innerHTML = `
-            <div class="card-carrinho">
-                <img src="${produto.imagem}" alt="${produto.nome}">
-                <div class="titulo-card">
-                    <p class="nome-carrinho">${produto.nome}</p>
-                    <p class="preco-carrinho">${produto.preco}</p>
+            // Exibir o produto no carrinho
+            produtoContainer.innerHTML = `
+                <div class="card-carrinho">
+                    <img src="${produto.imagem}" alt="${produto.nome}">
+                    <div class="titulo-card">
+                        <p class="nome-carrinho">${produto.nome}</p>
+                        <p class="preco-carrinho">${produto.preco.replace(".", ",")}</p>
+                    </div>
+                    <div class="mais_menos">
+                        <button class="negativo" onclick="alterarQuantidade(-1)">-</button>
+                        <div class="quantidade" id="quantidade">1</div>
+                        <button class="positivo" onclick="alterarQuantidade(1)">+</button>
+                    </div>
                 </div>
-                <div class="mais_menos">
-                    <button class="negativo" onclick="alterarQuantidade(-1)">-</button>
-                    <div class="quantidade" id="quantidade">1</div>
-                    <button class="positivo" onclick="alterarQuantidade(1)">+</button>
-                </div>
-            </div>
-        `;
+            `;
+            
 
-        // Exibir o preço total
-        totalContainer.innerHTML = `<p>Total: ${produto.preco}</p>`;
-
-        atualizarValor(); // Atualizar o valor inicial
-    } else {
-        // Se não houver produto no LocalStorage, exibir uma mensagem
-        const produtoContainer = document.getElementById('produto');
-        produtoContainer.innerHTML = `<p>Seu carrinho está vazio</p>`;
-    }
+            // Exibir o preço total
+            totalContainer.innerHTML = `<p>Total: ${produto.preco}</p>`;
+            
+            atualizarValor(); // Atualizar o valor inicial
+        } else {
+            // Se não houver produto no LocalStorage, exibir uma mensagem
+            const produtoContainer = document.getElementById('produto');
+            produtoContainer.innerHTML = `<p>Seu carrinho está vazio</p>`;
+        }
+    // }
 });
+
+
 
 // Função para alterar a quantidade de produtos
 function alterarQuantidade(delta) {
@@ -71,3 +76,5 @@ function atualizarValor() {
         document.getElementById('total').innerHTML = `<p>Total: R$${valorTotal.toFixed(2).replace(".", ",")}</p>`;
     }
 }
+
+// document.getElementById('total').textContent = `Total de Produtos: ${favoritos.length}`

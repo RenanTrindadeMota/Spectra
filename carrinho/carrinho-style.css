@@ -107,6 +107,11 @@ header li button {
     align-items: center;
 }
 
+.card-carrinho img {
+    height: 228px;
+    width: 172px;
+}
+
 .titulo-card {
     font-family: 'open-sans';
     display: flex;
