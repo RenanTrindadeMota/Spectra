@@ -93,6 +93,16 @@ header li button {
     text-decoration: none;
 }
 
+.space-card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start; /* Alinha os cards no topo verticalmente */
+    justify-content: flex-start; /* Alinha os cards à esquerda */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+
+}
+
 .card {
     width: 270px;
     height: 320px;
@@ -159,22 +169,4 @@ header li button {
     cursor: pointer;
     position: relative;
     left: 100px;
-}
-
-.positivo {
-    width: 30px;
-    height: 30px;
-    background-image: url(img/positivo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.negativo {
-    width: 30px;
-    height: 30px;
-    background-image: url(img/negativo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }

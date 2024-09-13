@@ -152,11 +152,11 @@ header li button {
     font-size: 30px;
     color: #FFF;
     /* filter: drop-shadow(5px 5px 5px rgb(214, 106, 4)); */
-    text-shadow: 0 0 5px #B09E90,
-                0 0 10px #B09E90, 
-                0 0 20px #B09E90,
-                0 0 40px #B09E90,
-                0 0 80px #B09E90;
+    text-shadow: 0 0 5px #ABBBD4,
+                0 0 10px #ABBBD4, 
+                0 0 20px #ABBBD4,
+                0 0 40px #ABBBD4,
+                0 0 80px #ABBBD4;
     transition: text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -191,7 +191,7 @@ header li button {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #C9BDAD;
+    background-color: #ABBBD4;
     width: 0;
     transition: width 0.4s ease;
     z-index: -1;

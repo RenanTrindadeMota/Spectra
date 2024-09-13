@@ -12,14 +12,16 @@ function atualizarProdutos() {
     produtoContainer.innerHTML = ''; // Limpar o container para evitar duplicações
 
 
-    
+    const space_card = document.createElement('div');  //essa div deve ficar fora do loop forEach para ser criada uma única vez
+    space_card.classList.add('space-card');             //nunca passei tanto sufoco só para ajustar uma div, ufa
+
+    // Adicionar todos os cards dentro do space_card
     favoritos.forEach((favorito, index) => {
         const card = document.createElement('div');
         card.classList.add('card');
 
         const removerButton = document.createElement('button');
-        removerButton.classList.add('remover-btn')
-        // removerButton.textContent = 'Remover';
+        removerButton.classList.add('remover-btn');
         removerButton.onclick = () => removerFavorito(index);
 
         const img = document.createElement('img');
@@ -41,12 +43,15 @@ function atualizarProdutos() {
         card.appendChild(img);
         titulo_card.appendChild(nome);
         titulo_card.appendChild(preco);
-        card.appendChild(titulo_card)
+        card.appendChild(titulo_card);
 
-
-        produtoContainer.appendChild(card);
+        space_card.appendChild(card);
     });
 
+    // Inserir o único space_card no container de produtos
+    produtoContainer.appendChild(space_card);
+
+    // Atualizar o total de produtos
     document.getElementById('total').textContent = `Total de Produtos: ${favoritos.length}`;
 }
 
