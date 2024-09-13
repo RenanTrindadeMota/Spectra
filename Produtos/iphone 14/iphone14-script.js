@@ -4,9 +4,9 @@ function addAoCarrinho() {
 
     // Definir os dados do produto
     const produto = {
-        nome: "Iphone 16 Pro",
-        preco: "R$2999,99",
-        imagem: "../img/iphone_15_pro.png", // Caminho da imagem
+        nome: "Iphone 14",
+        preco: "R$3999,99",
+        imagem: "../img/iphone-14.png", // Caminho da imagem
         quantidade: 1 // Inicia com quantidade 1
     };
 
