@@ -1,3 +1,4 @@
+//função para botão de coração(favoritos):
 function addAoFavoritos(cardId) {
     const card = document.getElementById(cardId);
     const imgSrc = card.querySelector('img').src;
@@ -46,3 +47,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => atualizarBotaoFavoritos(card.id));
 });
+
+//função do click do card de cada produto
+function selecionarProduto(cardElement) {
+    // Obter os elementos internos do card usando querySelector com base nas classes
+    const nome = cardElement.querySelector('.nome').textContent;
+    const preco = cardElement.querySelector('.preco').textContent;
+    const imagem = cardElement.querySelector('.imagem-produto').src;
+
+    // Montar o objeto do produto
+    const produto = {
+        nome: nome,
+        preco: preco,
+        imagem: imagem
+    };
+
+    // Salvar o produto no localStorage
+    localStorage.setItem('produtoSelecionado', JSON.stringify(produto));
+
+    // Redirecionar para a página de detalhes do produto
+    const url = cardElement.getAttribute('data-url');
+    window.location.href = url;
+}
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+

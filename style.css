@@ -30,7 +30,12 @@ header {
     z-index: 50;
     overflow: hidden;
     position: fixed;
-    /* background-color: red; */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+header.scrolled {
+    background-color: #F5F5F7; /* Fundo branco ao fazer scroll */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra, opcional */
 }
 
 header li{
@@ -93,9 +98,11 @@ header li button {
 }
 
 .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
     margin-top: 80px;
-    margin-left: 50px;
-    margin-right: 50px;
 }
 
 .container a {
@@ -116,7 +123,7 @@ header li button {
     font-size: 30px;
     color: #fff;
     position: absolute;
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 120px;
 }
 
@@ -125,7 +132,7 @@ header li button {
     font-size: 15px;
     color: #fff;
     position: absolute;
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 150px;
 }
 
@@ -138,11 +145,21 @@ header li button {
     border: 1px solid #fff;
     border-radius: 20px;
     position: absolute;
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 170px;
     cursor: pointer;
 }
 
+.destaques {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.destaques h1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 .space-card {
     display: flex;

@@ -18,7 +18,7 @@ header {
     overflow: hidden;
     position: fixed;
     background-image: linear-gradient(to bottom, #00000033, #00000000, #00000000);
-    /* background-color: red; */
+    transition: background-color 0.3s ease;
 }
 
 header.scrolled {
@@ -94,13 +94,15 @@ header li button {
     flex-direction: row;
     gap: 200px;
     margin-top: 80px;
+    margin-right: 50px;
     background-color: #f4f4f4;
+    /* background-color: rgb(234, 230, 225); */
 }
 
 .cartaz {
-    width: 650px;
+    width: 450px;
     height: 650px;
-    background-image: url(../../img/iphone_15_pro1.png);
+    background-image: url(../../img/iphone-14-2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -208,99 +210,9 @@ header li button {
     border: 2px solid #00000096;
 }
 
-/* #detalhes {
+#detalhes {
     width: 300px;
     height: 250px;
     display: flex;
-} */
-
-.container2 {
-    width: 100%;
-    height: 500px;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 100px;
-    margin-top: 80px;
 }
 
-.img-dados {
-    width: 600px;
-    height: 400px;
-    background-image: url(../../img/iphone16pro3.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.dados {
-    width: 500px;
-    height: 400px;
-    /* padding: 50px 0; */
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.dados p {
-    font-family: 'open-sans';
-    font-size: 20px;
-    font-weight: bold;
-    color: #151515;
-    text-align: justify;
-}
-
-.container3 {
-    width: 100%;
-    height: 500px;
-    padding: 50px 80px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.container3 h1 {
-    font-family: 'open-sans';
-    font-size: 40px;
-}
-
-.ajuste-especif {
-    display: flex;
-    justify-content: center;
-    flex-direction: row-reverse;
-    gap: 200px;
-}
-
-.img-especif {
-    width: 400px;
-    height: 350px;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: #000;
-    background-image: url(../../img/iphone16pro4.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.especificacoes {
-    width: 500px;
-    height: 350px;
-    font-family: 'open-sans';
-    text-align: justify;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}

@@ -29,53 +29,60 @@
        </div>
        
        
-        <div class="space-card">
+       <div class="destaques">
+            <h1>Produtos em Destaque</h1>
+            <div class="space-card">
+                <div class="card" id="card-1" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
+                    <button class="favoritos" onclick="addAoFavoritos('card-1'); event.stopPropagation();"></button>
+                    <a href="Produtos/iphone15/iphone15.html">
+                        <img src="img/iphone_15_pro.png" alt="" class="imagem-produto">
+                        <div class="titulo-card">
+                            <p class="nome">Iphone 16 Pro</p>
+                            <p class="preco">R$10.999,00</p>
+                        </div>
+                    </a>
+                </div>
 
-            <div class="card" id="card-1">
-                <button class="favoritos" onclick="addAoFavoritos('card-1')"></button>
-                <a href="Produtos/iphone15/iphone15.html">
-                    <img src="img/iphone_15_pro.png" alt="">
-                    <div class="titulo-card">
-                        <p class="nome">Iphone 16 Pro</p>
-                        <p class="preco">R$2.999,00</p>
-                    </div>
-                </a>
+                <div class="card" id="card-2" data-url="Produtos/zFlip6/zFlip6.html" onclick="selecionarProduto(this)">
+                    <button class="favoritos" onclick="addAoFavoritos('card-2'); event.stopPropagation();"></button>
+                    <a href="Produtos/zFlip6/zFlip6.html">
+                        <img src="img/zFlip6-1.png" alt="" class="imagem-produto">
+                        <div class="titulo-card">
+                            <p class="nome">Z Flip6</p>
+                            <p class="preco">R$7.999,00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" id="card-3" data-url="Produtos/iphone14/iphone14.html" onclick="selecionarProduto(this)">
+                    <button class="favoritos" onclick="addAoFavoritos('card-3'); event.stopPropagation();"></button>
+                    <a href="Produtos/iphone14/iphone14.html">
+                        <img src="img/iphone-14.png" alt="" class="imagem-produto">
+                        <div class="titulo-card">
+                            <p class="nome">Iphone 14</p>
+                            <p class="preco">R$5.799,00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" id="card-4" data-url="Produtos/xiaomi14ultra/xiaomi14u.html" onclick="selecionarProduto(this)">
+                    <button class="favoritos" onclick="addAoFavoritos('card-4'); event.stopPropagation();"></button>
+                    <a href="Produtos/xiaomi14ultra/xiaomi14u.html">
+                        <img src="img/xiaomi14ultra.png" alt="" class="imagem-produto">
+                        <div class="titulo-card">
+                            <p class="nome">Xiomi 14 Ultra</p>
+                            <p class="preco">R$8.699,00</p>
+                        </div>
+                    </a>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="card" id="card-2">
-                <button class="favoritos" onclick="addAoFavoritos('card-2')"></button>
-                <a href="Produtos/zFlip6/zFlip6.html">
-                    <img src="img/zFlip6-1.png" alt="">
-                    <div class="titulo-card">
-                        <p class="nome">Z Flip6</p>
-                        <p class="preco">R$7.999,00</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card" id="card-3">
-                <button class="favoritos" onclick="addAoFavoritos('card-3')"></button>
-                <a href="Produtos/iphone 14/iphone14.html">
-                    <img src="img/iphone-14.png" alt="">
-                    <div class="titulo-card">
-                        <p class="nome">Iphone 14</p>
-                        <p class="preco">R$3.999,00</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card" id="card-4">
-                <button class="favoritos" onclick="addAoFavoritos('card-4')"></button>
-                <a href="Produtos/iphone 14/iphone14.html">
-                    <img src="img/iphone-14.png" alt="">
-                    <div class="titulo-card">
-                        <p class="nome">Iphone 14</p>
-                        <p class="preco">R$3.999,00</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card" id="card-5">
+    <script src="script.js"></script>
+</body>
+</html>
+            <!-- <div class="card" id="card-5">
                 <button class="favoritos" onclick="addAoFavoritos('card-5')"></button>
                 <a href="Produtos/iphone 14/iphone14.html">
                     <img src="img/iphone-14.png" alt="">
@@ -249,12 +256,7 @@
                         <p class="preco">R$3.999,00</p>
                     </div>
                 </a>
-            </div>
+            </div> -->
             
-        </div>
+        
         <!-- Adicione mais cards conforme necessário -->
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
