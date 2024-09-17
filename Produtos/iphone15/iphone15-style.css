@@ -238,8 +238,8 @@ header li button {
     height: auto;
     padding: 15px;
     border-radius: 20px;
-    background-color: #f4f4f4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -288,12 +288,13 @@ header li button {
     width: 100%;
     height: 500px;
     padding: 50px 80px;
-    margin-top: 40px;
+    margin-top: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 30px;
+    background-color: #f4f4f4;
 }
 
 .container3 h1 {
@@ -313,6 +314,7 @@ header li button {
     height: 350px;
     padding: 5px;
     border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #000;
     background-image: url(../../img/iphone16pro4.png);
     background-size: cover;
@@ -332,4 +334,45 @@ header li button {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+}
+
+.container4 {
+    width: 100%;
+    height: auto;
+    padding: 50px 80px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container4 h1 {
+    font-family: 'sf-regular';
+    font-size: 40px;
+}
+
+.ajuste-quemsomos {
+    width: 1200px;
+    height: 700px;
+    text-align: justify;
+    font-family: 'open-sans';
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.topicos {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: #000;
 }

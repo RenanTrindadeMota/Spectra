@@ -22,14 +22,57 @@
     </header>
 
     <div class="container">
-       <div class="banner">
-            <p class="titulo-banner">ULTRAPASSANDO OS LIMITES</p>
-            <P class="promo-banner">Confira nossas promoções</P>
-            <button id="saiba-banner">Saiba mais</button>
-       </div>
-       
-       
-       <div class="destaques">
+        <div class="slider">
+            <div class="list">
+        
+        
+              <div class="item">
+                <img src="img/iphone-16-banner.png" alt="">
+              </div>
+        
+        
+              <div class="item">
+                <img src="img/airpods-pro-banner.png" alt="">
+              </div>
+        
+        
+              <div class="item">
+                <img src="img/galaxy-book-2-banner.jpg" alt="">
+              </div>
+        
+        
+              <div class="item">
+                <img src="img/xiaomi-14-banner.jpg" alt="">
+              </div>
+        
+        
+              <div class="item">
+                <img src="img/galaxy-watch-ultra-banner.jpg" alt="">
+              </div>
+        
+        
+            </div>
+        
+        
+            <div class="buttons">
+              <button id="prev">
+                < </button>
+                  <button id="next">></button>
+            </div>
+        
+        
+            <ul class="dots">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+        
+        
+        </div>
+
+        <div class="destaques">
             <h1>Produtos em Destaque</h1>
             <div class="space-card">
                 <div class="card" id="card-1" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
@@ -75,9 +118,32 @@
                         </div>
                     </a>
                 </div>
-
-                
             </div>
+        </div>
+
+       <div class="Scroll_Trigger">
+            <ul id="slide">
+                <li class="cartao" id="cartao1">
+                    <div class="cartao-body">
+                        <h2>Card 1</h2>
+                    </div>
+                </li>
+                <li class="cartao" id="cartao2">
+                    <div class="cartao-body">
+                        <h2>Card 2</h2>
+                    </div>
+                </li>
+                <li class="cartao" id="cartao3">
+                    <div class="cartao-body">
+                        <h2>Card 3</h2>
+                    </div>
+                </li>
+                <li class="cartao" id="cartao4">
+                    <div class="cartao-body">
+                        <h2>Card 4</h2>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 
