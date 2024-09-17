@@ -19,6 +19,11 @@
     src:url(fonts/Roboto-Slab.ttf)
 }
 
+@font-face {
+    font-family: 'sf-regular';
+    src:url(fonts/Sf-pro-regular.OTF)
+}
+
 body {
     background-color: #F5F5F7;
 }
@@ -158,7 +163,8 @@ header li button {
 }
 
 .destaques h1 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:'sf-regular';
+    font-size: 40px;
 }
 
 .space-card {
