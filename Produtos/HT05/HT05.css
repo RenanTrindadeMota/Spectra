@@ -100,8 +100,8 @@ header li button {
 }
 
 .cartaz {
-    width: 550px;
-    height: 650px;
+    width: 360px;
+    height: 580px;
     background-image: url(../../img/HT05/HT05-2.png);
     background-size: cover;
     background-position: center;
@@ -112,7 +112,7 @@ header li button {
 .cartaz::before {
     content: "";
     position: absolute;
-    bottom: -96%;
+    bottom: -98.5%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -120,7 +120,7 @@ header li button {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    clip-path: polygon(0 88%, 100% 88%, 100% 100%, 0 100%);
+    clip-path: polygon(0 83.5%, 100% 83.5%, 100% 100%, 0 100%);
     transform: scaleY(-1);
     opacity: 0.3;
     filter: blur(2px);
@@ -145,31 +145,30 @@ header li button {
     padding-bottom: 30px;
 }
 
-#resistencia {
+#resistente {
     font-family: 'open-sans';
     font-size: 30px;
-    margin-right: 200px;
+    margin-right: 230px;
 }
 
-#titanio {
+#impermeavel {
     font-family: 'open-sans';
     font-size: 30px;
     color: #FFF;
     /* filter: drop-shadow(5px 5px 5px rgb(214, 106, 4)); */
-    text-shadow: 0 0 5px #B09E90,
-                0 0 10px #B09E90, 
-                0 0 20px #B09E90,
-                0 0 40px #B09E90,
-                0 0 80px #B09E90;
+    text-shadow: 0 0 5px #29282D,
+                0 0 10px #29282D, 
+                0 0 20px #29282D,
+                0 0 40px #29282D,
+                0 0 80px #29282D;
     transition: text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-#beleza {
+#potente {
     font-family: 'open-sans';
     font-size: 30px;
-    margin-left: 200px;
+    margin-left: 230px;
 }
-
 #comprar {
     /* width: 300px;
     height: 50px; */
@@ -195,7 +194,7 @@ header li button {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #C9BDAD;
+    background-color: #bdbdbd;
     width: 0;
     transition: width 0.4s ease;
     z-index: -1;
@@ -209,10 +208,3 @@ header li button {
     color: white;
     border: 2px solid #00000096;
 }
-
-#detalhes {
-    width: 300px;
-    height: 250px;
-    display: flex;
-}
-
