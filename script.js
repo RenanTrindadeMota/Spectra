@@ -70,6 +70,58 @@ function selecionarProduto(cardElement) {
     window.location.href = url;
 }
 
+function addAoCarrinho(cardElement) {
+
+    const nome = cardElement.querySelector('.nome').textContent;
+    const preco = cardElement.querySelector('.preco').textContent;
+    const imagem = cardElement.querySelector('.imagem-produto').src;
+
+    const produto = {
+        nome: nome,
+        preco: preco,
+        imagem: imagem
+    };
+
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    const produtoExistente = carrinho.find(item => item.nome === produto.nome);
+
+    let mensagem = '';
+    if (produtoExistente) {
+        // Se o produto já estiver no carrinho, incrementar a quantidade
+        produtoExistente.quantidade += 1;
+        mensagem = 'Produto adicionado novamente ao carrinho!';
+    } else {
+        // Caso contrário, adicionar o produto ao carrinho com quantidade 1
+        produto.quantidade = 1;
+        carrinho.push(produto);
+        mensagem = 'Produto adicionado ao carrinho!';
+    }
+
+    // Armazenar o carrinho atualizado no LocalStorage
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+    // Exibir a mensagem de adição ao carrinho
+    exibirMensagem(mensagem);
+}
+
+
+
+function exibirMensagem(mensagem) {
+    const mensagemDiv = document.createElement('div');
+    mensagemDiv.className = 'mensagem-carrinho';
+    mensagemDiv.textContent = mensagem;
+
+    document.body.appendChild(mensagemDiv);
+
+    // Remover a mensagem após 3 segundos
+    setTimeout(() => {
+        mensagemDiv.remove();
+    }, 3000);
+}
+
+
+//função do header para mudança de cor
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
@@ -79,6 +131,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
+//função do carrossel
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');

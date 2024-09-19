@@ -238,8 +238,6 @@ header li button {
     height: auto;
     padding: 15px;
     border-radius: 20px;
-    /* background-color: #f4f4f4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -268,7 +266,6 @@ header li button {
     width: 500px;
     height: 400px;
     padding: 10px;
-    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -278,7 +275,6 @@ header li button {
 .dados p {
     font-family: 'open-sans';
     font-size: 18px;
-    /* font-weight: bold; */
     color: #151515;
     text-align: justify;
     padding: 10px;
@@ -320,7 +316,6 @@ header li button {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -341,7 +336,7 @@ header li button {
     width: 100%;
     height: auto;
     padding: 50px 80px;
-    margin-top: 120px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,7 +369,48 @@ header li button {
 
 footer {
     width: 100%;
-    height: 400px;
+    height: 300px;
     margin-top: 50px;
-    background-color: #000;
+    color: #FFF;
+    background-image: url(../../img/fundo-rodape.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer h1 {
+    font-family: 'sf-regular';
+    font-size: 40px;
+}
+
+footer h2 {
+    font-family: 'sf-regular';
+    font-size: 26px;
+}
+
+footer h3 {
+    font-family: 'open-sans';
+    font-size: 22px;
+}
+
+footer p {
+    font-family: 'open-sans';
+    font-size: 20px;
+}
+
+.ajuste-rodape {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.dados-rodape {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

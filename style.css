@@ -201,19 +201,22 @@ header li button {
 }
 
 #cartao1 .cartao-body {
+    margin-top: 50px;
     background-color: #52B2CF;
 }
 
 #cartao2 .cartao-body {
-    /* background-color: #7EC4CF; */
+    margin-top: 50px;
     background-color: #E5A36F;
 }
 
 #cartao3 .cartao-body {
+    margin-top: 50px;
     background-color: #9CADCE;
 }
 
 #cartao4 .cartao-body {
+    margin-top: 50px;
     background-color: #D4AFB9;
 }
 
@@ -222,7 +225,7 @@ header li button {
     padding: 30px;
     border-radius: 50px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-    height: var(--cardHeight);
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,6 +309,57 @@ header li button {
     position: relative;
     left: 100px;
 }
+
+.carrinho-card {
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    border: none;
+    background: transparent;
+    background-image: url(img/carrinho.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative; /* Importante para posicionar o pseudo-elemento */
+    left: 100px;
+}
+
+.carrinho-card::before {
+    content: ''; /* Pseudo-elemento precisa de conteúdo para ser renderizado */
+    position: absolute; /* Para posicionar em relação ao carrinho */
+    top: -11px;
+    left: -5px;
+    width: 45px; /* Círculo deve ficar um pouco maior que o carrinho */
+    height: 45px;
+    border: 1px solid #000; 
+    border-radius: 50%; 
+    background-color: transparent;
+    z-index: -1; 
+}
+
+.mensagem-carrinho {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeInOut 3s;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 
 .remover-btn {
     display: flex;
