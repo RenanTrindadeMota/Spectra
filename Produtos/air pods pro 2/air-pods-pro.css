@@ -217,3 +217,203 @@ header li button {
     display: flex;
 }
 
+.container2 {
+    width: 100%;
+    height: 500px;
+    padding: 100px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 h1 {
+    font-family: 'sf-regular';
+    font-size: 50px;
+}
+
+.ajuste-dados-total {
+    max-width: 1350px;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+    /* background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ajuste-dados {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    padding: 18px 0;
+}
+
+.img-dados {
+    width: 500px;
+    height: 430px;
+    padding: 10px;
+    background-image: url(../../img/air-pods-pro/airPodsPro3.png);
+    filter: drop-shadow(7px 7px 7px rgba(174, 174, 174, 0.76));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.dados {
+    width: 500px;
+    height: 400px;
+    padding: 10px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dados p {
+    font-family: 'open-sans';
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: #151515;
+    text-align: justify;
+    padding: 10px;
+}
+
+.container3 {
+    width: 100%;
+    height: 500px;
+    padding: 50px 80px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #f4f4f4;
+}
+
+.container3 h1 {
+    font-family: 'open-sans';
+    font-size: 40px;
+}
+
+.ajuste-especif {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 200px;
+}
+
+.img-especif {
+    width: 270px;
+    height: 350px;
+    padding: 5px;
+    border-radius: 20px;
+    background-image: url(../../img/air-pods-pro/airPodsPro.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(7px 7px 7px rgba(174, 174, 174, 0.76));
+    position: relative;
+}
+
+.especificacoes {
+    width: 500px;
+    height: 350px;
+    font-family: 'open-sans';
+    text-align: justify;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container4 {
+    width: 100%;
+    height: auto;
+    padding: 50px 80px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container4 h1 {
+    font-family: 'sf-regular';
+    font-size: 40px;
+}
+
+.ajuste-quemsomos {
+    width: 1200px;
+    height: auto;
+    text-align: justify;
+    font-family: 'open-sans';
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.topicos {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+    color: #FFF;
+    background-image: url(../../img/fundo-rodape.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer h1 {
+    font-family: 'sf-regular';
+    font-size: 40px;
+}
+
+footer h2 {
+    font-family: 'sf-regular';
+    font-size: 26px;
+}
+
+footer h3 {
+    font-family: 'open-sans';
+    font-size: 22px;
+}
+
+footer p {
+    font-family: 'open-sans';
+    font-size: 20px;
+}
+
+.ajuste-rodape {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.dados-rodape {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

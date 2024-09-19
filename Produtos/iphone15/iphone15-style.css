@@ -104,7 +104,7 @@ header li button {
 .cartaz {
     width: 650px;
     height: 650px;
-    background-image: url(../../img/iphone_15_pro1.png);
+    background-image: url(../../img/iphone-15/iphone_15_pro1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -255,7 +255,7 @@ header li button {
     width: 600px;
     height: 400px;
     padding: 10px;
-    background-image: url(../../img/iphone16pro3.png);
+    background-image: url(../../img/iphone-15/iphone16pro3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -312,7 +312,7 @@ header li button {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #000;
-    background-image: url(../../img/iphone16pro4.png);
+    background-image: url(../../img/iphone-15/iphone16pro4.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
