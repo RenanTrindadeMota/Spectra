@@ -138,6 +138,27 @@ header li button {
     height: 100%;
     object-fit: cover;
 }
+
+.titulo-item {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 140px;
+    top: 50px;
+    color: #fff;
+    text-shadow: 0 0 5px #272727
+}
+
+.titulo-item h1 {
+    font-size: 80px;
+    font-family: 'sf-regular'
+}
+
+.titulo-item h2 {
+    font-size: 60px;
+    font-family: 'sf-regular'
+}
+
 .slider .buttons{
     position: absolute;
     width: 100%;
@@ -246,6 +267,7 @@ header li button {
 .destaques h1 {
     font-family:'sf-regular';
     font-size: 40px;
+    text-shadow: 0 0 5px #cecece
 }
 
 .space-card {
@@ -270,6 +292,7 @@ header li button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .card:hover {
@@ -302,6 +325,22 @@ header li button {
     z-index: 10;
     border: none;
     background: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+    left: 100px;
+}
+
+.remover-btn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: none;
+    opacity: 75%;
+    background: transparent;
+    background-image: url(img/x-icon.jpeg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -360,20 +399,165 @@ header li button {
     100% { opacity: 0; }
 }
 
-.remover-btn {
+.lancamentos {
     display: flex;
-    width: 40px;
-    height: 40px;
-    border: none;
-    opacity: 75%;
-    background: transparent;
-    background-image: url(img/x-icon.jpeg.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.lancamentos h1 {
+    font-family:'sf-regular';
+    font-size: 40px;
+}
+
+.warper {
+    width: 1200px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    gap: 20px;
+}
+
+.slide-lancamento {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    transition: 0.6s;
+}
+
+.warper input {
+    display: none;
+}
+
+.navegar {
+    display: flex;
+    justify-content: center;
+    margin-top: -80px;
+}
+
+.manual {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
     cursor: pointer;
-    position: relative;
-    left: 100px;
+    margin-right: 10px;
+    transition: 1.4s;
+}
+.manual:hover {
+    background-color: rgb(89, 162, 177);
+}
+
+
+#slide1:checked ~ .s1 {
+    margin-left: 1.5%;
+  }
+
+#slide2:checked ~ .s1 {
+margin-left: -98%;
+}
+
+.acessorios {
+    width: 1200px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.acessorios h1 {
+    margin: 10px;
+    font-family:'sf-regular';
+    font-size: 40px;
+    text-shadow: 0 0 5px #cecece
+}
+
+.slides-acessorios {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.slide-acessorio {
+    display: flex;
+    gap: 20px;
+    transition: .6s;
+}
+
+.slides-acessorios input {
+    display: none;
+}
+
+.navigation {
+    width: 1250px;
+    margin-top: 60px;
+    position: absolute;
+    display: flex;
+    gap: 1150px;
+}
+
+.bar {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#seta1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#seta2:checked ~ .s1 {
+    margin-left: -92%;
+}
+
+.quem-somos {
+    width: 100%;
+    height: auto;
+    padding: 50px 80px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.quem-somos h1 {
+    font-family: 'sf-regular';
+    font-size: 40px;
+}
+
+.ajuste-quemsomos {
+    width: 1200px;
+    height: auto;
+    text-align: justify;
+    font-family: 'open-sans';
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.topicos {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 footer {
@@ -381,7 +565,7 @@ footer {
     height: 300px;
     margin-top: 50px;
     color: #FFF;
-    background-image: url(../../img/fundo-rodape.jpg);
+    background-image: url(img/fundo-rodape.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src:url(../../fonts/OpenSans-Regular.ttf)
+
+}
+
+header {
+    width: 100%;
+    height: 55px;
+    top: 0;
+    z-index: 50;
+    overflow: hidden;
+    position: fixed;
+    background-image: linear-gradient(to bottom, #00000033, #00000000, #00000000);
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #F5F5F7; /* Fundo branco ao fazer scroll */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra, opcional */
+}
+
+header li{
+    display: inline-block;
+}
+
+header li button {
+    font-size: 130%;
+    text-decoration: none;
+    color: #000;
+    font-family: 'antic didone';
+    background-color: transparent;
+    border: none;
+    padding: 0px 20px;
+    cursor: pointer;
+    display: flex;
+}
+
+.navbar {
+    width: 100%;
+    height: 55px;
+    max-width: 1750px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+
+}
+
+.left-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    width: 180px;
+    height: 40px;
+    background-image: url(../../img/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#carrinho {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/carrinho.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%;
+    height: 755px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 200px;
+    margin-top: 80px;
+    margin-right: 50px;
+    background-color: #f4f4f4;
+    /* background-color: rgb(234, 230, 225); */
+}
+
+.cartaz {
+    width: 450px;
+    height: 600px;
+    background-image: url(../../img/jbl-tour-pro2/jbl-tour-pro-2-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.cartaz::before {
+    content: "";
+    position: absolute;
+    bottom: -99.5%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 86.8%, 100% 86.8%, 100% 100%, 0 100%);
+    transform: scaleY(-1);
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+.ajuste-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info h1 {
+    font-family: 'open-sans';
+    font-size: 80px;
+    padding-bottom: 30px;
+}
+
+
+#imersivo {
+    font-family: 'open-sans';
+    font-size: 30px;
+    margin-right: 230px;
+}
+
+#semLimites {
+    font-family: 'open-sans';
+    font-size: 30px;
+    color: #FFF;
+    /* filter: drop-shadow(5px 5px 5px rgb(214, 106, 4)); */
+    text-shadow: 0 0 5px #29282D,
+                0 0 10px #29282D, 
+                0 0 20px #29282D,
+                0 0 40px #29282D,
+                0 0 80px #29282D;
+    transition: text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#cancel-ruido {
+    font-family: 'open-sans';
+    font-size: 30px;
+    margin-left: 200px;
+}
+
+#comprar {
+    /* width: 300px;
+    height: 50px; */
+    padding: 10px 21px;
+    font-size: 20px;
+    font-family: 'open-sans';
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 30px;
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+#comprar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #515055;
+    width: 0;
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+#comprar:hover::before {
+    width: 100%;
+}
+
+#comprar:hover {
+    color: white;
+    border: 2px solid #00000096;
+}
+
+#comprar:hover {
+    color: white;
+    border: 2px solid #00000096;
+}
+
+#detalhes {
+    width: 300px;
+    height: 250px;
+    display: flex;
+}
+
+
+.container2 {
+    width: 100%;
+    height: 500px;
+    padding: 100px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 h1 {
+    font-family: 'sf-regular';
+    font-size: 50px;
+}
+
+.ajuste-dados-total {
+    max-width: 1350px;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+    /* background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ajuste-dados {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    padding: 18px 0;
+}
+
+.img-dados {
+    width: 500px;
+    height: 430px;
+    padding: 10px;
+    background-image: url(../../img/jbl-tour-pro2/jbl-tour-pro-2-1.png);
+    filter: drop-shadow(7px 7px 7px rgba(174, 174, 174, 0.76));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.dados {
+    width: 500px;
+    height: 400px;
+    padding: 10px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dados p {
+    font-family: 'open-sans';
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: #151515;
+    text-align: justify;
+    padding: 10px;
+}
+
+.container3 {
+    width: 100%;
+    height: 500px;
+    padding: 50px 80px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #f4f4f4;
+}
+
+.container3 h1 {
+    font-family: 'open-sans';
+    font-size: 40px;
+}
+
+.ajuste-especif {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 200px;
+}
+
+.img-especif {
+    width: 400px;
+    height: 350px;
+    padding: 5px;
+    border-radius: 20px;
+    background-image: url(../../img/jbl-tour-pro2/tour-pro-2-especificacoes.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(7px 7px 7px rgba(174, 174, 174, 0.76));
+    position: relative;
+}
+
+.especificacoes {
+    width: 500px;
+    height: 350px;
+    font-family: 'open-sans';
+    text-align: justify;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container4 {
+    width: 100%;
+    height: auto;
+    padding: 50px 80px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container4 h1 {
+    font-family: 'sf-regular';
+    font-size: 40px;
+}
+
+.ajuste-quemsomos {
+    width: 1200px;
+    height: auto;
+    text-align: justify;
+    font-family: 'open-sans';
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.topicos {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+    color: #FFF;
+    background-image: url(../../img/fundo-rodape.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer h1 {
+    font-family: 'sf-regular';
+    font-size: 40px;
+}
+
+footer h2 {
+    font-family: 'sf-regular';
+    font-size: 26px;
+}
+
+footer h3 {
+    font-family: 'open-sans';
+    font-size: 22px;
+}
+
+footer p {
+    font-family: 'open-sans';
+    font-size: 20px;
+}
+
+.ajuste-rodape {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.dados-rodape {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
