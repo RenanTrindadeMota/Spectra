@@ -129,26 +129,113 @@
             </div>
         </div>
 
-       <div class="Scroll_Trigger">
+        <div class="Scroll_Trigger">
             <ul id="slide">
                 <li class="cartao" id="cartao1">
-                    <div class="cartao-body">
-                        <h2>Card 1</h2>
+
+                    <div id="primeiroPainel" class="cartao-body">
+
+                        <div class="audio">
+                            <h1>Desempenho de Aúdio</h1>
+                            <p>Fone HTO5</p>
+                            <div class="barra1"></div>
+                            <p>Fones Convencionais</p>
+                            <div class="barra2"></div>
+                        </div>
+
+
+                        <div class="microfone">
+                            <h1>Desempenho dos Microfones</h1>
+                            <p>Fone HTO5</p>
+                            <div class="barra1"></div>
+                            <p>Fones Convencionais</p>
+                            <div class="barra2"></div>
+                        </div>
+
+
+                        <div class="bateria">
+                            <h1>Bateria</h1>
+                            <p>Fone HTO5</p>
+                            <div class="barra1"></div>
+                            <p>Fones Convencionais</p>
+                            <div class="barra2"></div>
+                        </div>
+
+
+                        <div class="conexao">
+                            <h1>Conexão</h1>
+                            <p>Fone HTO5</p>
+                            <div class="barra1"></div>
+                            <p>Fones Convencionais</p>
+                            <div class="barra2"></div>
+                        </div>
+
                     </div>
+
+                    <div class="imagemfone">
+                        <img src="img/HT05/HT05-2.png" alt="">
+                        <h1>QCY HT05</h1>
+                    </div>
+
                 </li>
+
                 <li class="cartao" id="cartao2">
-                    <div class="cartao-body">
-                        <h2>Card 2</h2>
+                    <div id="segundoPainel" class="cartao-body">
+
+                        <div class="iphoneChip">
+                            <h1>Novo chip A18 Pro. Altíssimo desempenho. Baixo consumo de energia.</h1>
+                        </div>
+
                     </div>
                 </li>
                 <li class="cartao" id="cartao3">
-                    <div class="cartao-body">
-                        <h2>Card 3</h2>
+                    <div id="terceiroPainel" class="cartao-body">
+
+                        <div class="pt1">
+                            <img src="img/airpodsPT1.jpeg" alt="">
+                        </div>
+
+                        <div class="pt2">
+                            <img src="img/airpodsPT2.jpeg" alt="">
+                        </div>
+
+                        <div class="pt3">
+                            <img src="img/airpodsPT3.jpeg" alt="">
+                        </div>
+
+                        <div class="pt4">
+                            <img src="img/airpodsPT4.jpeg" alt="">
+                        </div>
+
+                        <div class="pt5">
+                            <img src="img/airpodsPT5.jpeg" alt="">
+                        </div>
+
+                        <h1>Os AirPods Pro 2 incluem quatro pares de
+                            pontas de silicone para um encaixe ideal.
+                            Elas mantêm os fones confortavelmente fixos
+                            e criam uma vedação acústica que retém o som.</h1>
+
                     </div>
                 </li>
                 <li class="cartao" id="cartao4">
-                    <div class="cartao-body">
-                        <h2>Card 4</h2>
+                    <div id="quartoPainel" class="cartao-body">
+
+                        <h1>O MacBook Pro vem com uma grande
+                            variedade de portas para conectar periférico
+                            s de alta velocidade, monitores de alta resolução
+                            ou cartões SDXC. E também é compatível com Wi-Fi 6E e Bluetooth 5.3.</h1>
+
+                        <div class="pt1">
+                            <img src="img/macbookimage1.jpeg" alt="">
+                        </div>
+
+                        <div class="pt2">
+                            <img src="img/macbookimage2.jpeg" alt="">
+                        </div>
+
+                        <p>MacBook Pro</p>
+
                     </div>
                 </li>
             </ul>
@@ -166,7 +253,7 @@
                     <div class="card" id="card-13" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-13'); event.stopPropagation();"></button>
                         <a href="">
-                            <img src="img/galaxy-A55/Galaxy-A55-V1-removebg-preview.png" alt="">
+                            <img src="img/galaxy-A55/Galaxy-A55-V1-removebg-preview.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Galaxy A55</p>
                                 <p class="preco">2,499.00</p>
@@ -178,7 +265,7 @@
                     <div class="card" id="card-14" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-14'); event.stopPropagation();"></button>
                         <a href="Produtos//.html">
-                            <img src="img/galaxy-M55/Galaxy-M55-V1-removebg-preview.png" alt="">
+                            <img src="img/galaxy-M55/Galaxy-M55-V1-removebg-preview.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Galaxy M55</p>
                                 <p class="preco">1.799,00</p>
@@ -190,7 +277,7 @@
                     <div class="card" id="card-15" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-15'); event.stopPropagation();"></button>
                         <a href="Produtos//.html">
-                            <img src="img/readmi-node-13-pro/Redmi-Note-13-V1-removebg-preview.png" alt="">
+                            <img src="img/readmi-node-13-pro/Redmi-Note-13-V1-removebg-preview.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Readmi Note 13 Pro</p>
                                 <p class="preco">1.589,00</p>
@@ -202,7 +289,7 @@
                     <div class="card" id="card-16" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-16'); event.stopPropagation();"></button>
                         <a href="Produtos//.html">
-                            <img src="img/edge-50-ultra/Edge-50-Ultra-V1-removebg-preview.png" alt="">
+                            <img src="img/edge-50-ultra/Edge-50-Ultra-V1-removebg-preview.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Edge 50 Ultra</p>
                                 <p class="preco">3.250,00</p>
@@ -218,7 +305,7 @@
                     <div class="card" id="card-17" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-17'); event.stopPropagation();"></button>
                         <a href="Produtos//.html">
-                            <img src="img/dell-xps-16/Dell-XPS-16-V1-removebg-preview.png" alt="">
+                            <img src="img/dell-xps-16/Dell-XPS-16-V1-removebg-preview.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Dell XPS 16</p>
                                 <p class="preco">10.515,00</p>
@@ -226,10 +313,10 @@
                         </a>
                         <button class="carrinho-card" onclick="addAoCarrinho(this.closest('.card')), event; event.stopPropagation();"></button>
                     </div>
-                    <div class="card" id="card-18" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
+                    <div class="card" id="card-18" data-url="Produtos/galaxy-book-2/galaxy-book-2.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-18'); event.stopPropagation();"></button>
-                        <a href="Produtos//.html">
-                            <img src="img/galaxy-book-2/Galaxy-Book-2-V1-removebg-preview.png" alt="">
+                        <a href="Produtos/galaxy-book-2/galaxy-book-2.html">
+                            <img src="img/galaxy-book-2/Galaxy-Book-2-V1-removebg-preview.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Galaxy Book 2</p>
                                 <p class="preco">2.849,00</p>
@@ -237,10 +324,10 @@
                         </a>
                         <button class="carrinho-card" onclick="addAoCarrinho(this.closest('.card')), event; event.stopPropagation();"></button>
                     </div>
-                    <div class="card" id="card-19" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
+                    <div class="card" id="card-19" data-url="Produtos/air-pods-pro-4/air-pods-pro-4.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-19'); event.stopPropagation();"></button>
-                        <a href="Produtos//.html">
-                            <img src="img/air-pods-pro-4/card-airPodsPro4.png" alt="">
+                        <a href="Produtos/air-pods-pro-4/air-pods-pro-4.html">
+                            <img src="img/air-pods-pro-4/card-airPodsPro4.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Air Pods Pro 4</p>
                                 <p class="preco">112,00</p>
@@ -248,10 +335,10 @@
                         </a>
                         <button class="carrinho-card" onclick="addAoCarrinho(this.closest('.card')), event; event.stopPropagation();"></button>
                     </div>
-                    <div class="card" id="card-20" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
+                    <div class="card" id="card-20" data-url="Produtos/jbl-tour-pro-2/jbl-tour-pro-2.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-20'); event.stopPropagation();"></button>
                         <a href="Produtos/jbl tour pro 2/jbl-tour-pro-2.html">
-                            <img src="img/jbl-tour-pro2/card-jbl-tour-pro-2.png" alt="">
+                            <img src="img/jbl-tour-pro2/card-jbl-tour-pro-2.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">JBL Tour Pro 2</p>
                                 <p class="preco">1.099,00</p>
@@ -279,9 +366,9 @@
 
 
                 <div class="slide-acessorio s1">
-                    <div class="card" id="card-5" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
+                    <div class="card" id="card-5" data-url="Produtos/air-pods-pro-4/air-pods-pro-4.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-5'); event.stopPropagation();"></button>
-                        <a href="Produtos/iphone15/iphone15.html">
+                        <a href="Produtos/air-pods-pro-4/air-pods-pro-4.html">
                             <img src="img/air-pods-pro-4/card-airPodsPro4.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Air Pods Pro 4</p>
@@ -303,9 +390,9 @@
                         <button class="carrinho-card" onclick="addAoCarrinho(this.closest('.card')), event; event.stopPropagation();"></button>
                     </div>
 
-                    <div class="card" id="card-7" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
+                    <div class="card" id="card-7" data-url="Produtos/HT05/HT05.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-7'); event.stopPropagation();"></button>
-                        <a href="Produtos/iphone15/iphone15.html">
+                        <a href="Produtos/HT05/HT05.html">
                             <img src="img/HT05/card-HT05.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">HT05</p>
@@ -315,9 +402,9 @@
                         <button class="carrinho-card" onclick="addAoCarrinho(this.closest('.card')), event; event.stopPropagation();"></button>
                     </div>
 
-                    <div class="card" id="card-8" data-url="Produtos/iphone15/iphone15.html" onclick="selecionarProduto(this)">
+                    <div class="card" id="card-8" data-url="Produtos/galaxy-watch-ultra/galaxy-watch-ultra.html" onclick="selecionarProduto(this)">
                         <button class="favoritos" onclick="addAoFavoritos('card-8'); event.stopPropagation();"></button>
-                        <a href="Produtos/iphone15/iphone15.html">
+                        <a href="Produtos/galaxy-watch-ultra/galaxy-watch-ultra.html">
                             <img src="img/galaxy-watch-ultra/card-galaxy-watch.png" class="imagem-produto">
                             <div class="titulo-card">
                                 <p class="nome">Galaxy Watch Ultra</p>

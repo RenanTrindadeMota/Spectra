@@ -176,6 +176,33 @@ header li button {
     font-size: 50px;
 }
 
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.slider .dots li.active{
+     width: 30px; /*tamanho do botão quando ativado */
+     cursor: pointer;
+}
+
+/* carrossel vertical */
 :root {
     --cards: 4;
     --cardHeight: 87vh;
@@ -223,22 +250,21 @@ header li button {
 
 #cartao1 .cartao-body {
     margin-top: 50px;
-    background-color: #52B2CF;
+    background-color: #080808;
 }
 
 #cartao2 .cartao-body {
     margin-top: 50px;
-    background-color: #E5A36F;
 }
 
 #cartao3 .cartao-body {
     margin-top: 50px;
-    background-color: #9CADCE;
+    background-color: #000;
 }
 
 #cartao4 .cartao-body {
     margin-top: 50px;
-    background-color: #D4AFB9;
+    background-color: #fff;
 }
 
 .cartao-body {
@@ -255,6 +281,297 @@ header li button {
 
 .cartao-body h2 {
     font-size: 2.5em;
+}
+
+/* Edição primeiro card carrossel */
+@keyframes fade-right{
+    0% {
+        opacity: 0;
+        transform: translateX(-200px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+
+}
+
+@keyframes fade-down{
+    0% {
+        opacity: 0;
+        transform: translateY(-200px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+
+}
+
+@keyframes fade-left{
+    0% {
+        opacity: 0;
+        transform: translateX(200px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+
+}
+
+@keyframes fade-up{
+    0% {
+        opacity: 0;
+        transform: translateY(200px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+
+}
+
+#primeiroPainel {
+    display: flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items: flex-start;
+}
+
+#primeiroPainel p{
+    font-weight: 400;
+    color: #fff;
+    margin-top: 10px;
+    font-family: 'sf-regular';
+    animation: fade-right 3s;
+}
+
+#primeiroPainel h1{
+    font-weight: 900;
+    color: #fff;
+    font-family: 'roboto';
+    animation: fade-right 3s;
+}
+
+/*  Edição do primeiro card */
+
+.barra1 {
+    position: relative;
+    background: #040305;
+    margin-bottom: 20px;
+    height: 20px;
+    width: 400px;
+}
+
+.barra1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0bec7c;
+    transform-origin: left;
+    animation: movbarras 3s linear;
+}
+
+.barra2{
+    position: relative;
+    width: 400px;
+    height: 20px;
+    margin-bottom: 20px;
+    background: #040305;
+}
+
+.barra2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0bec7c;
+    transform-origin: left;
+    animation: movbarras 2.8s linear;
+}
+
+@keyframes movbarras{
+    0%,50%{
+        transform: scaleX(0);
+        box-shadow: 0 0 0 4px #0bec7c22,
+        0 0 0 10px #0bec7c22,
+        0 0 20px #0bec7c,
+        0 0 40px 5px #0bec7c,
+        0 0 60px 10px #0bec7c;
+    }
+}
+
+/* Parte audio*/
+.audio .barra1{
+   width: 380px;
+   box-shadow: 0 0 2px #cecece;
+}
+
+.audio .barra2{
+    width: 280px;
+    box-shadow: 0 0 2px #cecece;
+ }
+
+/* Parte Microfone */
+
+.microfone .barra1{
+    width: 290px;
+    box-shadow: 0 0 2px #cecece;
+ }
+
+
+.microfone .barra2{
+    width: 200px;
+    box-shadow: 0 0 2px #cecece;
+ }
+
+/* Parte Bateria */
+
+.bateria .barra1 {
+    width: 300px ;
+    box-shadow: 0 0 2px #cecece;
+}    
+
+
+.bateria .barra2{
+    width: 220px;    
+    box-shadow: 0 0 2px #cecece;
+}
+
+/* Parte Conexao */
+
+.conexao .barra1{
+    width: 280px;
+    box-shadow: 0 0 2px #cecece;
+}
+
+
+.conexao .barra2 {
+    width: 200px;
+    box-shadow: 0 0 2px #cecece;
+}
+
+/* imagem do fone */
+.imagemfone{
+    margin-left: 95vh;
+    margin-top: -72.5vh;
+    animation: fade-left 4s;
+
+}
+
+.imagemfone h1{
+    margin-left: 5vh;
+    font-family: 'sf-regular';
+    font-size: 40px;
+    text-shadow: 0 0 2px #cecece;
+    color: #F5F5F7;
+}
+
+/* Edição segundo card carrossel*/
+
+#segundoPainel{
+    background-image: url("img/iphone-chip.jpeg");
+    background-size: cover;
+}
+
+.iphoneChip h1{
+    padding-top: 58vh;
+    font-family: 'sf-regular';
+    font-size: 40px;
+    text-shadow: 0 0 5px #cecece;
+    color: #F5F5F7;
+    animation: fade-up 9s ;
+}
+
+/* edição terceiro card carrossel */
+
+#terceiroPainel .pt1{
+    animation: fade-down 5.1s;
+    margin-top: -10vh;
+    margin-left: 15vh;
+    margin-right: 10vh;
+}
+
+#terceiroPainel .pt2{
+    animation: fade-down 5.2s;
+    margin-top: -10vh;
+    margin-left: 5vh;
+    margin-right: 10vh;
+}
+
+#terceiroPainel .pt3{
+    animation: fade-down 5.3s;
+    margin-top: -10vh;
+    margin-left: 5vh;
+    margin-right: 10vh;
+}
+
+#terceiroPainel .pt4{
+    animation: fade-down 5.4s;
+    margin-top: -10vh;
+    margin-left: 5vh;
+    margin-right: 10vh;
+}
+
+#terceiroPainel .pt5{
+    animation: fade-down 5.5s;
+    margin-top: -10vh;
+    margin-left: 5vh;
+
+}
+
+#terceiroPainel h1{
+    font-family: 'sf-regular';
+    font-size: 30px;
+    text-shadow: 0 0 5px #cecece;
+    color: #F5F5F7;
+    margin-top: 60vh;
+    margin-left: -140vh;
+    animation: fade-up 6.5s;
+}
+
+/* edição quarto painel carrossel */
+#quartoPainel {
+    display: flex;
+    flex-direction: column;
+}
+
+#quartoPainel h1{
+    font-family: 'sf-regular';
+    font-size: 30px;
+    text-shadow: 0 0 5px #cecece;
+    color: #7a7a7a;
+
+}
+#quartoPainel .pt1 img{
+    width: 120vh;
+    height: 16vh;
+    margin: 5vh;
+    margin-top: 10vh;
+    margin-left: 40vh;
+    animation: fade-right 5s;
+}
+
+#quartoPainel .pt2 img{
+    width: 120vh;
+    height: 16vh;
+    margin: 5vh;
+    margin-right: 40vh ;
+    animation: fade-left 5s;
+}
+
+#quartoPainel p{
+    font-family: 'sf-regular';
+    font-size: 60px;
+    text-shadow: 0 0 5px #cecece;
+    color: #000000;
+    animation: fade-up 5s;
 }
 
 .destaques {
