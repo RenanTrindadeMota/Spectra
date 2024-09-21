@@ -104,7 +104,7 @@ header li button {
 .cartaz {
     width: 650px;
     height: 650px;
-    background-image: url(../../img/galaxy-watch-ultra/galaxy-watch1.png);
+    background-image: url(../../img/galaxy-A55/a55.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -158,11 +158,11 @@ header li button {
     font-size: 30px;
     color: #FFF;
     /* filter: drop-shadow(5px 5px 5px rgb(214, 106, 4)); */
-    text-shadow: 0 0 5px #d05a00,
-                0 0 10px #d05a00, 
-                0 0 20px #d05a00,
-                0 0 40px #d05a00,
-                0 0 80px #d05a00;
+    text-shadow: 0 0 5px #A273EC,
+                0 0 10px #A273EC, 
+                0 0 20px #A273EC,
+                0 0 40px #A273EC,
+                0 0 80px #A273EC;
     transition: text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -197,7 +197,7 @@ header li button {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #eb6c0a;
+    background-color: #A273EC;
     width: 0;
     transition: width 0.4s ease;
     z-index: -1;
@@ -238,6 +238,8 @@ header li button {
     height: auto;
     padding: 15px;
     border-radius: 20px;
+    /* background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -252,11 +254,11 @@ header li button {
 }
 
 .img-dados {
-    width: 600px;
+    width: 650px;
     height: 400px;
     padding: 10px;
-    border-radius: 20px;
-    background-image: url(../../img/galaxy-watch-ultra/galaxy-watch-ultra4.jpg);
+    background-image: url(../../img/galaxy-A55/a55-destaques.png);
+    filter: drop-shadow(7px 7px 7px rgba(174, 174, 174, 0.76));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -267,6 +269,7 @@ header li button {
     width: 500px;
     height: 400px;
     padding: 10px;
+    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -276,6 +279,7 @@ header li button {
 .dados p {
     font-family: 'open-sans';
     font-size: 18px;
+    /* font-weight: bold; */
     color: #151515;
     text-align: justify;
     padding: 10px;
@@ -311,9 +315,9 @@ header li button {
     height: 350px;
     padding: 5px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #000;
-    background-image: url(../../img/galaxy-watch-ultra/galaxy-watch-ultra3.png);
+    
+    background-image: url(../../img/galaxy-A55/a55-especific.png);
+    filter: drop-shadow(7px 7px 7px rgba(174, 174, 174, 0.76));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -337,7 +341,7 @@ header li button {
     width: 100%;
     height: auto;
     padding: 50px 80px;
-    margin-top: 80px;
+    margin-top: 120px;
     display: flex;
     justify-content: center;
     align-items: center;

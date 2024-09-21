@@ -7,11 +7,7 @@
 @font-face {
     font-family: 'open-sans';
     src:url(../../fonts/OpenSans-Regular.ttf)
-}
 
-@font-face {
-    font-family: 'sf-regular';
-    src:url(../../fonts/Sf-pro-regular.OTF)
 }
 
 header {
@@ -22,7 +18,7 @@ header {
     overflow: hidden;
     position: fixed;
     background-image: linear-gradient(to bottom, #00000033, #00000000, #00000000);
-    /* background-color: red; */
+    transition: background-color 0.3s ease;
 }
 
 header.scrolled {
@@ -98,13 +94,15 @@ header li button {
     flex-direction: row;
     gap: 200px;
     margin-top: 80px;
+    margin-right: 50px;
     background-color: #f4f4f4;
+    /* background-color: rgb(234, 230, 225); */
 }
 
 .cartaz {
-    width: 650px;
-    height: 650px;
-    background-image: url(../../img/galaxy-watch-ultra/galaxy-watch1.png);
+    width: 500px;
+    height: 580px;
+    background-image: url(../../img/edge-50-ultra/edge-50-ultra.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -114,7 +112,7 @@ header li button {
 .cartaz::before {
     content: "";
     position: absolute;
-    bottom: -96%;
+    bottom: -100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -122,7 +120,7 @@ header li button {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    clip-path: polygon(0 88%, 100% 88%, 100% 100%, 0 100%);
+    clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
     transform: scaleY(-1);
     opacity: 0.3;
     filter: blur(2px);
@@ -147,31 +145,30 @@ header li button {
     padding-bottom: 30px;
 }
 
-#resistencia {
+#resistente {
     font-family: 'open-sans';
     font-size: 30px;
-    margin-right: 200px;
+    margin-right: 230px;
 }
 
-#titanio {
+#impermeavel {
     font-family: 'open-sans';
     font-size: 30px;
     color: #FFF;
     /* filter: drop-shadow(5px 5px 5px rgb(214, 106, 4)); */
-    text-shadow: 0 0 5px #d05a00,
-                0 0 10px #d05a00, 
-                0 0 20px #d05a00,
-                0 0 40px #d05a00,
-                0 0 80px #d05a00;
+    text-shadow: 0 0 5px #ca975c,
+                0 0 10px #ca975c, 
+                0 0 20px #ca975c,
+                0 0 40px #ca975c,
+                0 0 80px #ca975c;
     transition: text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-#beleza {
+#potente {
     font-family: 'open-sans';
     font-size: 30px;
-    margin-left: 200px;
+    margin-left: 230px;
 }
-
 #comprar {
     /* width: 300px;
     height: 50px; */
@@ -197,7 +194,7 @@ header li button {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #eb6c0a;
+    background-color: #e6b276;
     width: 0;
     transition: width 0.4s ease;
     z-index: -1;
@@ -211,12 +208,6 @@ header li button {
     color: white;
     border: 2px solid #00000096;
 }
-
-/* #detalhes {
-    width: 300px;
-    height: 250px;
-    display: flex;
-} */
 
 .container2 {
     width: 100%;
@@ -238,6 +229,8 @@ header li button {
     height: auto;
     padding: 15px;
     border-radius: 20px;
+    /* background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -252,11 +245,11 @@ header li button {
 }
 
 .img-dados {
-    width: 600px;
+    width:650px;
     height: 400px;
     padding: 10px;
-    border-radius: 20px;
-    background-image: url(../../img/galaxy-watch-ultra/galaxy-watch-ultra4.jpg);
+    background-image: url(../../img/edge-50-ultra/edge-50-ultra-destaques.png);
+    filter: drop-shadow(7px 7px 7px rgba(174, 174, 174, 0.76));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -267,6 +260,7 @@ header li button {
     width: 500px;
     height: 400px;
     padding: 10px;
+    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -276,6 +270,7 @@ header li button {
 .dados p {
     font-family: 'open-sans';
     font-size: 18px;
+    /* font-weight: bold; */
     color: #151515;
     text-align: justify;
     padding: 10px;
@@ -303,20 +298,19 @@ header li button {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
-    gap: 200px;
+    gap: 100px;
 }
 
 .img-especif {
-    width: 400px;
+    width: 500px;
     height: 350px;
     padding: 5px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #000;
-    background-image: url(../../img/galaxy-watch-ultra/galaxy-watch-ultra3.png);
+    background-image: url(../../img/edge-50-ultra/edge-50-ultra-especificacoes.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: drop-shadow(7px 7px 7px rgba(174, 174, 174, 0.76));
     position: relative;
 }
 
@@ -337,7 +331,7 @@ header li button {
     width: 100%;
     height: auto;
     padding: 50px 80px;
-    margin-top: 80px;
+    margin-top: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -362,6 +356,7 @@ header li button {
     flex-direction: column;
     gap: 20px;
 }
+
 
 .topicos {
     font-size: 25px;
