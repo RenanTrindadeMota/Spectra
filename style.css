@@ -264,7 +264,7 @@ header li button {
 
 #cartao4 .cartao-body {
     margin-top: 50px;
-    background-color: #fff;
+    background-color: #000;
 }
 
 .cartao-body {
@@ -283,67 +283,97 @@ header li button {
     font-size: 2.5em;
 }
 
-/* Edição primeiro card carrossel */
-@keyframes fade-right{
+@keyframes fade-right {
     0% {
         opacity: 0;
         transform: translateX(-200px) scale(0.9);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0px) scale(1);
     }
 
 }
 
-@keyframes fade-down{
+@keyframes fade-down {
     0% {
         opacity: 0;
-        transform: translateY(-200px) scale(0.9);
+        transform: translateY(-150px) scale(0.9);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0px) scale(1);
     }
 
 }
 
-@keyframes fade-left{
+@keyframes fade-left {
     0% {
         opacity: 0;
         transform: translateX(200px) scale(0.9);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0px) scale(1);
     }
 
 }
 
-@keyframes fade-up{
+@keyframes fade-up {
     0% {
         opacity: 0;
-        transform: translateY(200px) scale(0.9);
+        transform: translateY(150px) scale(0.9);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0px) scale(1);
     }
 
 }
 
-#primeiroPainel {
-    display: flex;
-    flex-direction: column;
-    justify-content : center;
-    align-items: flex-start;
+/* flutuação */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
-#primeiroPainel p{
+/* movimentação das barras  */
+@keyframes movbarras {
+
+    0%,
+    50% {
+        transform: scaleX(0);
+        box-shadow: 0 0 0 4px #0bec7c22,
+            0 0 0 10px #0bec7c22,
+            0 0 20px #0bec7c,
+            0 0 40px 5px #0bec7c,
+            0 0 60px 10px #0bec7c;
+    }
+}
+
+/*  Edição do primeiro card */
+
+#primeiroPainel .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 60vh;
+
+}
+
+#primeiroPainel p {
     font-weight: 400;
     color: #fff;
     margin-top: 10px;
@@ -351,14 +381,13 @@ header li button {
     animation: fade-right 3s;
 }
 
-#primeiroPainel h1{
+#primeiroPainel h1 {
     font-weight: 900;
     color: #fff;
+    text-shadow: 0 0 2px #cecece;
     font-family: 'roboto';
     animation: fade-right 3s;
 }
-
-/*  Edição do primeiro card */
 
 .barra1 {
     position: relative;
@@ -368,7 +397,7 @@ header li button {
     width: 400px;
 }
 
-.barra1::before{
+.barra1::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -378,7 +407,7 @@ header li button {
     animation: movbarras 3s linear;
 }
 
-.barra2{
+.barra2 {
     position: relative;
     width: 400px;
     height: 20px;
@@ -396,57 +425,47 @@ header li button {
     animation: movbarras 2.8s linear;
 }
 
-@keyframes movbarras{
-    0%,50%{
-        transform: scaleX(0);
-        box-shadow: 0 0 0 4px #0bec7c22,
-        0 0 0 10px #0bec7c22,
-        0 0 20px #0bec7c,
-        0 0 40px 5px #0bec7c,
-        0 0 60px 10px #0bec7c;
-    }
-}
-
 /* Parte audio*/
-.audio .barra1{
-   width: 380px;
-   box-shadow: 0 0 2px #cecece;
+
+.audio .barra1 {
+    width: 380px;
+    box-shadow: 0 0 2px #cecece;
 }
 
-.audio .barra2{
+.audio .barra2 {
     width: 280px;
     box-shadow: 0 0 2px #cecece;
- }
+}
 
 /* Parte Microfone */
 
-.microfone .barra1{
+.microfone .barra1 {
     width: 290px;
     box-shadow: 0 0 2px #cecece;
- }
+}
 
 
-.microfone .barra2{
+.microfone .barra2 {
     width: 200px;
     box-shadow: 0 0 2px #cecece;
- }
+}
 
 /* Parte Bateria */
 
 .bateria .barra1 {
-    width: 300px ;
+    width: 300px;
     box-shadow: 0 0 2px #cecece;
-}    
+}
 
 
-.bateria .barra2{
-    width: 220px;    
+.bateria .barra2 {
+    width: 220px;
     box-shadow: 0 0 2px #cecece;
 }
 
 /* Parte Conexao */
 
-.conexao .barra1{
+.conexao .barra1 {
     width: 280px;
     box-shadow: 0 0 2px #cecece;
 }
@@ -458,121 +477,214 @@ header li button {
 }
 
 /* imagem do fone */
-.imagemfone{
+.imagemfone {
     margin-left: 95vh;
     margin-top: -72.5vh;
-    animation: fade-left 4s;
-
+    animation: float 3s ease-in-out infinite;
 }
 
-.imagemfone h1{
+.imagemfone h1 {
     margin-left: 5vh;
     font-family: 'sf-regular';
     font-size: 40px;
-    text-shadow: 0 0 2px #cecece;
+    text-shadow: 0 0 2.5px #cecece;
     color: #F5F5F7;
 }
 
 /* Edição segundo card carrossel*/
 
-#segundoPainel{
+#segundoPainel {
     background-image: url("img/iphone-chip.jpeg");
     background-size: cover;
 }
 
-.iphoneChip h1{
+.iphoneChip h1 {
     padding-top: 58vh;
     font-family: 'sf-regular';
     font-size: 40px;
     text-shadow: 0 0 5px #cecece;
     color: #F5F5F7;
-    animation: fade-up 9s ;
+    animation: fade-up 2s;
 }
 
 /* edição terceiro card carrossel */
 
-#terceiroPainel .pt1{
-    animation: fade-down 5.1s;
-    margin-top: -10vh;
+#terceiroPainel .pt1 {
+    animation: fade-right 7.5s;
+    margin-top: -20vh;
     margin-left: 15vh;
     margin-right: 10vh;
 }
 
-#terceiroPainel .pt2{
-    animation: fade-down 5.2s;
-    margin-top: -10vh;
+#terceiroPainel .pt2 {
+    animation: fade-right 6s;
+    margin-top: -20vh;
     margin-left: 5vh;
     margin-right: 10vh;
 }
 
-#terceiroPainel .pt3{
-    animation: fade-down 5.3s;
-    margin-top: -10vh;
+#terceiroPainel .pt3 {
+    animation: fade-right 4.5s;
+    margin-top: -20vh;
     margin-left: 5vh;
     margin-right: 10vh;
 }
 
-#terceiroPainel .pt4{
-    animation: fade-down 5.4s;
-    margin-top: -10vh;
+#terceiroPainel .pt4 {
+    animation: fade-right 3s;
+    margin-top: -20vh;
     margin-left: 5vh;
     margin-right: 10vh;
 }
 
-#terceiroPainel .pt5{
-    animation: fade-down 5.5s;
-    margin-top: -10vh;
+#terceiroPainel .pt5 {
+    animation: fade-right 1.5s;
+    margin-top: -2vh;
     margin-left: 5vh;
+
 
 }
 
-#terceiroPainel h1{
+#terceiroPainel h1 {
+    text-align: center;
     font-family: 'sf-regular';
     font-size: 30px;
     text-shadow: 0 0 5px #cecece;
     color: #F5F5F7;
     margin-top: 60vh;
-    margin-left: -140vh;
+    margin-left: -151vh;
     animation: fade-up 6.5s;
 }
 
-/* edição quarto painel carrossel */
+/* edição quarto card carrossel */
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes aparecer2 {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 #quartoPainel {
     display: flex;
     flex-direction: column;
 }
 
-#quartoPainel h1{
+#quartoPainel h1 {
     font-family: 'sf-regular';
-    font-size: 30px;
+    font-size: 45px;
     text-shadow: 0 0 5px #cecece;
-    color: #7a7a7a;
+    color: #F5F5F7;
+    animation: fade-up 4s;
 
 }
-#quartoPainel .pt1 img{
-    width: 120vh;
-    height: 16vh;
-    margin: 5vh;
-    margin-top: 10vh;
-    margin-left: 40vh;
-    animation: fade-right 5s;
-}
 
-#quartoPainel .pt2 img{
-    width: 120vh;
-    height: 16vh;
-    margin: 5vh;
-    margin-right: 40vh ;
-    animation: fade-left 5s;
-}
-
-#quartoPainel p{
+#quartoPainel h2 {
     font-family: 'sf-regular';
     font-size: 60px;
     text-shadow: 0 0 5px #cecece;
-    color: #000000;
-    animation: fade-up 5s;
+    color: #F5F5F7;
+    margin-top: -5vh;
+    margin-bottom: 4vh;
+    animation: fade-down 4s;
+
 }
+
+#quartoPainel .imagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #cecece;
+    color: #F5F5F7;
+    margin-bottom: 5vh;
+    animation: fade-up 4s;
+}
+
+#quartoPainel .imagens .laranja img {
+    height: 35vh;
+    width: 35vh;
+    margin: 2vh;
+    animation: aparecer2 4s;
+    -webkit-box-reflect: below -1vh linear-gradient(transparent, transparent, #0004);
+}
+
+#quartoPainel .imagens .cinza img {
+    height: 28vh;
+    width: 28vh;
+    margin: 2vh;
+    animation: aparecer2 3.8s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+
+}
+
+#quartoPainel .imagens .branco img {
+    height: 28vh;
+    width: 28vh;
+    margin: 2vh;
+    animation: aparecer2 3.6s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+
+#quartoPainel .imagens p {
+    display: flex;
+    justify-content: center;
+    font-family: 'sf-regular';
+    font-size: 35px;
+    color: #F5F5F7;
+    animation: aparecer 5s;
+
+}
+
+#quartoPainel .imagens .branco p {
+
+    text-shadow: 0 0 5px #dad7d7,
+        0 0 10px #dad7d7,
+        0 0 20px #dad7d7,
+        0 0 40px #dad7d7,
+        0 0 80px #dad7d7;
+
+    transition: text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#quartoPainel .imagens .cinza p {
+
+    text-shadow: 0 0 5px #7e7d7d,
+        0 0 10px #7e7d7d,
+        0 0 20px #7e7d7d,
+        0 0 40px #7e7d7d,
+        0 0 80px #7e7d7d;
+
+    transition: text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#quartoPainel .imagens .laranja p {
+
+    text-shadow: 0 0 5px #b36020,
+        0 0 10px #b36020,
+        0 0 20px #b36020,
+        0 0 40px #b36020,
+        0 0 80px #b36020;
+
+    transition: text-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
 
 .destaques {
     display: flex;
