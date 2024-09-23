@@ -171,6 +171,60 @@ window.onresize = function(event) {
     reloadSlider();
 };
 
+// ANIMAÇÃO DO SCROLL DO HEADER
+
+document.getElementById('produtos-btn').addEventListener('click', function() {
+    const targetElement = document.getElementById('titulo-acessorios');
+
+    // Calcula a posição do elemento em relação ao topo da página
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+    // Rola até 100 pixels acima do elemento
+    window.scrollTo({
+        top: elementPosition - 70,
+        behavior: 'smooth'
+    });
+});
+
+document.getElementById('lancamentos-btn').addEventListener('click', function() {
+    const targetElement = document.getElementById('titulo-lancamentos');
+
+    // Calcula a posição do elemento em relação ao topo da página
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+    // Rola até 100 pixels acima do elemento
+    window.scrollTo({
+        top: elementPosition - 70,
+        behavior: 'smooth'
+    });
+});
+
+// Animação de seguir scroll do carrossel vertical
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const options = {
+//         root: null, // Usa a viewport como o root
+//         rootMargin: '0px',
+//         threshold: 0.1 // O card deve estar 10% visível
+//     };
+
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 // Adiciona uma classe para iniciar a animação
+//                 entry.target.classList.add('animate');
+//                 // Para observar o card após a animação ser ativada
+//                 observer.unobserve(entry.target);
+//             }
+//         });
+//     }, options);
+
+//     // Seleciona todos os cartões
+//     const cards = document.querySelectorAll('cartao-body');
+//     cards.forEach(cartao => {
+//         observer.observe(cartao); // Inicia a observação em cada card
+//     });
+// });
 
 
 

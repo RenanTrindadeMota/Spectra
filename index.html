@@ -11,8 +11,8 @@
         <nav class="navbar">
             <div class="left-navbar">
                 <div id="logo"></div>
-                <a href="produtos-aba/produtos.html"><li><button>Produtos</button></li></a>
-                <a href="lancamentos/lancamentos.html"><li><button>Lançamentos</button></li></a>
+                <a id="produtos-btn"><li><button>Produtos</button></li></a>
+                <a id="lancamentos-btn"><li><button>Lançamentos</button></li></a>
             </div>
             <div class="right-navbar">
                 <a href="favoritos/favoritos.html"><li><button>Favoritos</button></li></a>
@@ -173,11 +173,12 @@
                             </div>
 
                         </div>
-                    </div>
+                    
 
-                    <div class="imagemfone">
-                        <img src="img/HT05/HT05-2.png" alt="">
-                        <h1>QCY HT05</h1>
+                        <div class="imagemfone">
+                            <img src="img/HT05/HT05-2.png" alt="">
+                            <h1>QCY HT05</h1>
+                        </div>
                     </div>
 
                 </li>
@@ -196,24 +197,26 @@
 
                     <div id="terceiroPainel" class="cartao-body">
 
-                        <div class="pt1">
-                            <img src="img/airpodsPT1.jpeg" alt="">
-                        </div>
+                        <div class="ajuste-painel-3">
+                            <div class="pt1">
+                                <img src="img/airpodsPT1.jpeg" alt="">
+                            </div>
 
-                        <div class="pt2">
-                            <img src="img/airpodsPT2.jpeg" alt="">
-                        </div>
+                            <div class="pt2">
+                                <img src="img/airpodsPT2.jpeg" alt="">
+                            </div>
 
-                        <div class="pt3">
-                            <img src="img/airpodsPT3.jpeg" alt="">
-                        </div>
+                            <div class="pt3">
+                                <img src="img/airpodsPT3.jpeg" alt="">
+                            </div>
 
-                        <div class="pt4">
-                            <img src="img/airpodsPT4.jpeg" alt="">
-                        </div>
+                            <div class="pt4">
+                                <img src="img/airpodsPT4.jpeg" alt="">
+                            </div>
 
-                        <div class="pt5">
-                            <img src="img/airpodsPT5.jpeg" alt="">
+                            <div class="pt5">
+                                <img src="img/airpodsPT5.jpeg" alt="">
+                            </div>
                         </div>
 
                         <h1>Os AirPods Pro 2 incluem quatro pares de
@@ -260,7 +263,7 @@
         </div>
 
         <div class="lancamentos">
-            <h1>Lançamentos Recentes</h1>
+            <h1 id="titulo-lancamentos">Lançamentos Recentes</h1>
     
             <div class="warper">
                 <input type="radio" name="slide" id="slide1" checked>
@@ -377,7 +380,7 @@
         </div>
 
         <div class="acessorios">
-            <h1>Acessórios:</h1>
+            <h1 id="titulo-acessorios">Acessórios:</h1>
             <div class="slides-acessorios">
                 <input type="radio" name="slide-acessorio" id="seta1" checked>
                 <input type="radio" name="slide-acessorio" id="seta2">

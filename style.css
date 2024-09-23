@@ -26,6 +26,7 @@
 
 body {
     background-color: #F5F5F7;
+    
 }
 
 header {
@@ -115,9 +116,9 @@ header li button {
 }
 
 .slider{
-    width: 90%;
+    width: 1900px;
     max-width: 100vw;
-    height: 700px;
+    height: 800px;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -133,10 +134,14 @@ header li button {
     transition: 1s;
 }
 .slider .list img{
-    width: 90vw;
-    max-width: 100vw;
+    width: 1920px;
+
     height: 100%;
-    object-fit: cover;
+
+    height: 100%;
+    /* Mude para contain para evitar corte */
+ 
+    
 }
 
 .titulo-item {
@@ -167,13 +172,14 @@ header li button {
 }
 .slider .buttons button{
     width: 50px;
-    height: 700px;
-    background-color: rgba(0, 0, 0, 0.333);
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0);
     color: #fff;
     border: none;
     font-family: monospace;
     font-weight: bold;
     font-size: 50px;
+    cursor: pointer;
 }
 
 .slider .dots{
@@ -204,15 +210,21 @@ header li button {
 
 /* carrossel vertical */
 :root {
-    --cards: 4;
-    --cardHeight: 87vh;
     --cardTopPadding: 1.5em;
-    --cardMargin: 4vw;
 }
 
 .Scroll_Trigger {
-    width: 80%;
-    margin: 2vh 10vh;
+    width: 1536px;
+    
+}
+
+.cartao {
+    width: 1536px;
+    margin: 0;
+}
+
+.cartao{
+   
 }
 
 #slide {
@@ -220,7 +232,7 @@ header li button {
     padding-left: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(var(--cards), var(--cardHeight));
+   
     gap: var(--cardMargin);
     padding-bottom: calc(var(--cards) * var(--cardTopPadding));
     margin-bottom: var(--cardMargin);
@@ -249,34 +261,46 @@ header li button {
 }
 
 #cartao1 .cartao-body {
+    width: 1536px;
     margin-top: 50px;
     background-color: #080808;
+    animation-timeline: view();
 }
 
 #cartao2 .cartao-body {
+    width: 1536px;
     margin-top: 50px;
+    animation-timeline: view();
 }
 
 #cartao3 .cartao-body {
+    width: 1536px;
     margin-top: 50px;
     background-color: #000;
+    animation-timeline: view();
 }
 
 #cartao4 .cartao-body {
+    width: 1536px;
     margin-top: 50px;
     background-color: #000;
+    animation-timeline: view();
 }
 
 .cartao-body {
+    width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
     padding: 30px;
     border-radius: 50px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-    height: 80vh;
+    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
+
 }
 
 .cartao-body h2 {
@@ -364,12 +388,13 @@ header li button {
 
 /*  Edição do primeiro card */
 
-#primeiroPainel .info {
+#primeiroPainel  {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    margin-right: 60vh;
+    flex-direction: row;
+    gap: 400px;
+    align-items: center
+    /* margin-right: 60vh; */
 
 }
 
@@ -478,8 +503,7 @@ header li button {
 
 /* imagem do fone */
 .imagemfone {
-    margin-left: 95vh;
-    margin-top: -72.5vh;
+    
     animation: float 3s ease-in-out infinite;
 }
 
@@ -499,7 +523,7 @@ header li button {
 }
 
 .iphoneChip h1 {
-    padding-top: 58vh;
+    padding-top: 600px;
     font-family: 'sf-regular';
     font-size: 40px;
     text-shadow: 0 0 5px #cecece;
@@ -510,39 +534,27 @@ header li button {
 /* edição terceiro card carrossel */
 
 #terceiroPainel .pt1 {
-    animation: fade-right 7.5s;
-    margin-top: -20vh;
-    margin-left: 15vh;
-    margin-right: 10vh;
+    animation: fade-left 1.5s;
 }
 
 #terceiroPainel .pt2 {
-    animation: fade-right 6s;
-    margin-top: -20vh;
-    margin-left: 5vh;
-    margin-right: 10vh;
+    animation: fade-left  3s;
+    
 }
 
 #terceiroPainel .pt3 {
-    animation: fade-right 4.5s;
-    margin-top: -20vh;
-    margin-left: 5vh;
-    margin-right: 10vh;
+    animation: fade-left  4.5s;
+    
 }
 
 #terceiroPainel .pt4 {
-    animation: fade-right 3s;
-    margin-top: -20vh;
-    margin-left: 5vh;
-    margin-right: 10vh;
+    animation: fade-left  6s;
+    
 }
 
 #terceiroPainel .pt5 {
-    animation: fade-right 1.5s;
-    margin-top: -2vh;
-    margin-left: 5vh;
-
-
+    animation: fade-left  7.5s;
+    margin-top: 180px;
 }
 
 #terceiroPainel h1 {
@@ -551,9 +563,21 @@ header li button {
     font-size: 30px;
     text-shadow: 0 0 5px #cecece;
     color: #F5F5F7;
-    margin-top: 60vh;
-    margin-left: -151vh;
     animation: fade-up 6.5s;
+}
+
+#terceiroPainel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ajuste-painel-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
 }
 
 /* edição quarto card carrossel */
@@ -601,8 +625,6 @@ header li button {
     font-size: 60px;
     text-shadow: 0 0 5px #cecece;
     color: #F5F5F7;
-    margin-top: -5vh;
-    margin-bottom: 4vh;
     animation: fade-down 4s;
 
 }
@@ -613,33 +635,30 @@ header li button {
     align-items: center;
     text-shadow: 0 0 5px #cecece;
     color: #F5F5F7;
-    margin-bottom: 5vh;
+    padding-bottom: 30px;
     animation: fade-up 4s;
 }
 
 #quartoPainel .imagens .laranja img {
-    height: 35vh;
-    width: 35vh;
-    margin: 2vh;
+    height: 450px;
+    width: 450px;
     animation: aparecer2 4s;
     -webkit-box-reflect: below -1vh linear-gradient(transparent, transparent, #0004);
 }
 
 #quartoPainel .imagens .cinza img {
-    height: 28vh;
-    width: 28vh;
-    margin: 2vh;
+    height: 400px;
+    width: 400px;
     animation: aparecer2 3.8s;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+    -webkit-box-reflect: below -40px linear-gradient(transparent, transparent, #0004);
 
 }
 
 #quartoPainel .imagens .branco img {
-    height: 28vh;
-    width: 28vh;
-    margin: 2vh;
+    height: 400px;
+    width: 400px;
     animation: aparecer2 3.6s;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+    -webkit-box-reflect: below -40px linear-gradient(transparent, transparent, #0004);
 }
 
 #quartoPainel .imagens p {
@@ -832,7 +851,7 @@ header li button {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 80px;
+    gap: 20px;
 }
 
 .lancamentos h1 {
@@ -865,7 +884,7 @@ header li button {
 
 .navegar {
     width: 1350px;
-    margin-top: 250px;
+    margin-top: 210px;
     position: absolute;
     display: flex;
     gap: 1250px;
@@ -1038,4 +1057,9 @@ footer p {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+#titulo-acessorios, #titulo-lancamentos {
+    transition: .4s ;
+    
 }
